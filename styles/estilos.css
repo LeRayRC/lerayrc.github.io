@@ -1,0 +1,366 @@
+
+
+@font-face {
+  font-family: spiderman;
+  src: url("../fonts/HOMOARAK.TTF");
+}
+
+*{
+    box-sizing: border-box;
+    /*background-color: black;*/
+    color: whitesmoke;
+    font-family: spiderman;
+}
+
+html, body{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+/* Elementos de neutralidad */
+header, section, article, footer, aside, nav,h1{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+header{
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(129, 31, 31);
+    border: 1px solid black;
+    color: black;
+    padding: 20px;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
+}
+
+header a:hover{
+    color: black;
+}
+
+footer{
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 80px;
+    background-color: rgb(129, 31, 31);
+    color: black;
+    align-items: center;
+}
+
+footer img{
+    width: 24px;
+    height: 24px;
+}
+
+footer div{
+    padding: 10px;
+}
+
+
+
+#landing_gif{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 200px;
+    height: 220px;
+    animation: mover 10s linear infinite;
+    /*background-color: blue;*/
+    background-image: url('../images/landing_gif.gif');
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in-out;
+    transition-property: all
+}
+
+@keyframes mover {
+0% {
+  margin-right: 0%;
+}
+100% {
+  margin-right: 100%;
+}
+}
+
+#landing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(129, 31, 31);
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    transition: height 0.75s ease;
+    /*padding: 20px;*/
+}
+
+#landing div, #landing div h1{
+    color: white;
+    font-size: 64px;
+}
+
+.flex-container-row{
+    flex-direction: row;
+}
+
+.flex-container-column{
+    flex-direction: column;
+}
+
+.personaje{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}
+
+.personaje div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    border: 0px red solid;
+    padding: 20px;
+    position: relative;
+}
+
+.habilidades{
+    width: 100%;
+    height: 500px;
+    background-color: #151D20
+}
+
+.enemigos{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(129, 31, 31);
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+}
+
+.enemigos div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: auto;
+    border: 0px red solid;
+    padding: 20px;
+    position: relative;
+}
+
+.enemigos div ul li{
+    float: left;
+    list-style: outside none none;
+    margin-right: 10px;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.enemigos div ul li:hover{
+    background-color: white;
+    color: black;
+}
+
+.img_responsive{
+    position: absolute;
+    border-radius: 45px 45px 45px 45px;
+    width: 80%;
+    height: 80%;
+    backface-visibility: hidden;
+    transition: transform 1s;;
+}
+
+.enemigos_imagen{
+    position: relative;
+    height: 500px;
+}
+.personaje #personaje_imagen:hover .front{
+    transform: rotateY(180deg);
+}
+
+.personaje #personaje_imagen:hover .back{
+    transform: rotateY(0deg);
+}
+
+.back{
+    transform: rotateY(180deg);
+}
+
+.no_landing{
+    display: none;
+}
+/*
+
+.flex-container{
+    display: flex;
+    flex-wrap: nowrap;
+    height: 700px;
+    justify-content: center;
+    background-color: rgb(129, 31, 31);
+    padding: 0px;
+    border: 0px solid black;
+    position: relative;
+}
+
+
+
+.flex-container div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    width: 50%;
+    margin: 0px;
+    text-align: center;
+    font-size: 30px;
+    border: 0px solid black;
+}
+
+.text{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    color: rgb(255, 255, 255);
+    margin: auto; 
+    padding:10px; 
+    font-size:xx-large;
+    visibility: hidden;
+}
+
+.flex-container div:hover .text{
+    visibility: visible;
+}
+
+.flex-container h1 {
+    font-size: 32px;
+    /*margin: auto; padding:10px;
+    background-color: black;
+}
+
+
+
+.responsive{
+    width: 90%;
+    height: 80%;
+}
+
+.responsive:hover{
+    width: 100%;
+    height: 100%;
+}
+*/
+/* Media */
+@media only screen and (min-width:769px){
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+    
+}
+@media only screen and (min-width:541px) and (max-width:769px) {
+    #landing div, #landing div h1{
+        color: white;
+        font-size: 42px;
+    }
+    header{
+        height: auto;
+    }
+    footer{
+        flex-direction: column;
+        height: auto;
+    }
+    .personaje{
+        margin-top: 100px;
+        flex-direction: column;
+        height: auto;
+    }
+    .personaje div{
+        width: 100%;
+    }
+    #personaje_imagen{
+        width: 90%;
+        height: 300px;
+    }
+    .img_responsive{
+        width: 90%;
+        height: 90%;
+    }
+
+    .enemigos{
+        height: auto;
+    }
+    .enemigos div{
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width:540px){
+    #landing div, #landing div h1{
+        color: white;
+        font-size: 24px;
+    }
+    header{
+        height: auto;
+    }
+    footer{
+        flex-direction: column;
+        height: auto;
+    }
+    .personaje{
+        margin-top: 100px;
+        flex-direction: column;
+        height: auto;
+    }
+    .personaje div{
+        width: 100%;
+    }
+    #personaje_imagen{
+        width: 90%;
+        height: 300px;
+    }
+    .img_responsive{
+        width: 90%;
+        height: 90%;
+    }
+
+    .enemigos{
+        height: auto;
+    }
+    .enemigos div{
+        flex-direction: column;
+        width: 100%;
+    }
+    .enemigos_imagen{
+        width: 90%;
+        height: 300px;
+    }
+    /*header{
+        height: 100px;
+    }*/
+    header a{
+        font-size: medium;
+        padding: 0px;
+    }
+}   

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title> Spider-man</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Carlos Garcia">
+        <meta name="owner" content="Carlos Garcia">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="./styles/estilos.css">
+        <link rel="icon" type="image/x-icon" href="./images/spiderman.ico">
+        <script src="scripts/setEnemy.js"></script>
+    </head>
+    <body>
+        <a name="inicio"></a>
+        <div id="landing" onclick="landing_shrink()">
+            <div id="landing_gif"></div>
+            <div><h1>SPIDERMAN Web</h1></div>
+            <div>Click aqui</div>
+        </div>
+        <div class="no_landing">
+            <iframe width="100%" height="400px" src="https://www.youtube.com/embed/Lddu3XraE0U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <a name="personaje"></a>
+        <header class="no_landing">
+            <div><a href="#inicio"><img id="logo" src="./images/logo.png" style="height: 50px; width: 50px;"></a> </div>
+            <div><a href="#personaje"> Personaje </a></div>
+            <div><a href="#habilidades"> Habilidades </a></div>
+            <div><a href="#enemigos"> Enemigos </a></div>
+            <div><a href="#enemigos"> Influencias </a></div>
+        </header>
+        
+        <div class="personaje no_landing">
+            <div id="personaje_imagen">
+                <img class="img_responsive front" src="images/spider-man.jpeg" alt="spiderman">
+                <img class="img_responsive back" src="images/peter-parker.jpg" alt="spiderman">
+            </div>
+            <div style="flex-direction: column;">
+
+                <h1> Peter Parker</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nulla aut accusantium ipsa magnam nobis aliquam quae eius impedit, optio, placeat praesentium at iure voluptates modi ullam corporis? Veniam, at.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus aspernatur repudiandae vitae odit quo nesciunt beatae consectetur deserunt consequatur, minus labore doloremque voluptatem amet! Minus corporis exercitationem laudantium sunt. Eaque.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, fuga laudantium eaque ipsum debitis optio atque non officiis id quaerat omnis itaque eligendi soluta nulla corporis sapiente commodi neque recusandae.
+                </p>        
+            </div>
+        </div>
+        <div class="habilidades no_landing">
+
+        </div>
+        <div class="no_landing"></div>
+        <a name="enemigos"></a>
+        <div class="enemigos no_landing">
+            <div >
+                <ul>
+                    <li onclick="setEnemy('Dr Octopus',1)">Dr Octopus</li>
+                    <li onclick="setEnemy('Electro',2)">Electro</li>
+                    <li onclick="setEnemy('Buitre',3)">Buitre</li>
+                    <li onclick="setEnemy('Rhino',4)">Rhino</li>
+                </ul>
+            </div>
+            <div>
+                <div class="flex-container-column">
+                    <h1 id="nombre_enemigo"> Dr Octopus </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum perferendis error reprehenderit eveniet sapiente necessitatibus fugit asperiores, odit, unde quidem sequi magnam, quasi obcaecati quae cumque veniam doloribus rerum suscipit?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, at repudiandae provident excepturi praesentium sint doloribus dicta doloremque officiis. Dolorem ea ab corporis necessitatibus accusamus omnis a maiores debitis libero.
+                    </p>
+                </div>
+                <div>
+                    <img id="imagen_enemigo" class="img_responsive enemigos_imagen" src="images/octopus.jpeg">
+                </div>
+            </div>
+
+        </div>
+        <div class="no_landing">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+
+        <!--<div class="flex-container" style="height: 100px;" >
+        </div> 
+        <div class="flex-container">
+            <div class="flex-container">
+                <img class="responsive" src="./images/spider-man.jpeg">
+                <h1 class="text"> PERSONAJE </h1>
+            </div>
+            <div class="flex-container">
+                <img class="responsive" src="./images/octopus.jpeg">
+                <h1 class="text"> VILLANOS </h1>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="flex-container">
+                <img class="responsive" src="./images/stanlee.jpeg">
+                <h1 class="text"> CREADOR </h1>
+            </div>
+            <div class="flex-container">
+                <img class="responsive" src="./images/influence.jpeg">
+                <h1 class="text"> INFLUENCIAS </h1>
+            </div>
+        </div>
+        <div class="flex-container" style="height: 50px;">
+            <h1 style="margin: auto; padding:10px; font-size:large;"> Created by Carlos Garcia</h1>
+        </div>
+    -->
+        <footer class="no_landing">
+            <div>
+                Academic Web made by Carlos Garcia
+            </div>
+            <div>
+                <a href="#">Contacto</a>
+            </div>
+            <div>
+                <a href="https://www.linkedin.com/in/carlos-garc%C3%ADa-roig-8a1536192/" target="_blank"><img src="./images/linkedin.png"></a>
+                <a href="https://twitter.com/SpiderMan" target="_blank"><img src="./images/twitter.png"></a>
+                <a href="https://www.youtube.com/channel/UChGyVH970KcYHYltQmR-JnA" target="_blank"><img src="./images/youtube.png"></a>
+            </div>
+        </footer>
+        <script src="scripts/spiderman_scripts.js"></script>
+    </body>
+</html>
