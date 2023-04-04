@@ -126,13 +126,13 @@ footer div{
 }
 
 .personaje{
-    margin-top: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: black;
     align-items: center;
     width: 100%;
-    height: 500px;
+    height: 600px;
 }
 
 .personaje div{
@@ -146,6 +146,7 @@ footer div{
     position: relative;
 }
 
+
 .habilidades{
     width: 100%;
     height: 500px;
@@ -154,50 +155,54 @@ footer div{
 
 .enemigos{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     background-color: rgb(129, 31, 31);
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    height: 700px;
+    height: 800px;
 }
 
 .enemigos div{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90%;
-    height: auto;
+    width: 50%;
+    height: 100%;
     border: 0px red solid;
     padding: 20px;
-    position: relative;
 }
 
-.enemigos div ul li{
+div ul li{
     float: left;
     list-style: outside none none;
     margin-right: 10px;
     border: 2px solid black;
     padding: 10px;
+    font-size: 32px;
 }
 
-.enemigos div ul li:hover{
+div ul li:hover{
     background-color: white;
     color: black;
 }
 
 .img_responsive{
+    display: flex;
     position: absolute;
     border-radius: 45px 45px 45px 45px;
-    width: 80%;
-    height: 80%;
+    padding: 30px;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
     backface-visibility: hidden;
     transition: transform 1s;;
 }
 
 .enemigos_imagen{
     position: relative;
-    height: 500px;
+    height: auto;
+    max-height: 100%;
 }
 .personaje #personaje_imagen:hover .front{
     transform: rotateY(180deg);
@@ -214,67 +219,6 @@ footer div{
 .no_landing{
     display: none;
 }
-/*
-
-.flex-container{
-    display: flex;
-    flex-wrap: nowrap;
-    height: 700px;
-    justify-content: center;
-    background-color: rgb(129, 31, 31);
-    padding: 0px;
-    border: 0px solid black;
-    position: relative;
-}
-
-
-
-.flex-container div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(0, 0, 0);
-    width: 50%;
-    margin: 0px;
-    text-align: center;
-    font-size: 30px;
-    border: 0px solid black;
-}
-
-.text{
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-    color: rgb(255, 255, 255);
-    margin: auto; 
-    padding:10px; 
-    font-size:xx-large;
-    visibility: hidden;
-}
-
-.flex-container div:hover .text{
-    visibility: visible;
-}
-
-.flex-container h1 {
-    font-size: 32px;
-    /*margin: auto; padding:10px;
-    background-color: black;
-}
-
-
-
-.responsive{
-    width: 90%;
-    height: 80%;
-}
-
-.responsive:hover{
-    width: 100%;
-    height: 100%;
-}
-*/
 /* Media */
 @media only screen and (min-width:769px){
     /* styles for mobile browsers smaller than 480px; (iPhone) */
@@ -292,28 +236,25 @@ footer div{
         flex-direction: column;
         height: auto;
     }
+    div ul li{
+        font-size: 24px;
+    }
     .personaje{
-        margin-top: 100px;
         flex-direction: column;
         height: auto;
     }
     .personaje div{
         width: 100%;
+        height: auto;
+        min-height: 400px;
     }
-    #personaje_imagen{
-        width: 90%;
-        height: 300px;
-    }
-    .img_responsive{
-        width: 90%;
-        height: 90%;
-    }
-
     .enemigos{
+        flex-direction: column;
         height: auto;
     }
     .enemigos div{
         flex-direction: column;
+        width: 100%;
     }
 }
 @media only screen and (max-width:540px){
@@ -328,21 +269,20 @@ footer div{
         flex-direction: column;
         height: auto;
     }
+    div ul li{
+        font-size: 18px;
+    }
     .personaje{
-        margin-top: 100px;
         flex-direction: column;
         height: auto;
     }
     .personaje div{
         width: 100%;
-    }
-    #personaje_imagen{
-        width: 90%;
-        height: 300px;
+        height: auto;
+        min-height: 400px;
     }
     .img_responsive{
-        width: 90%;
-        height: 90%;
+        max-height: 400px;
     }
 
     .enemigos{
@@ -351,10 +291,6 @@ footer div{
     .enemigos div{
         flex-direction: column;
         width: 100%;
-    }
-    .enemigos_imagen{
-        width: 90%;
-        height: 300px;
     }
     /*header{
         height: 100px;

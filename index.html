@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="./styles/estilos.css">
         <link rel="icon" type="image/x-icon" href="./images/spiderman.ico">
         <script src="scripts/setEnemy.js"></script>
+        <script src="scripts/addMargin.js"></script>
     </head>
     <body>
         <a name="inicio"></a>
@@ -23,19 +24,18 @@
         <a name="personaje"></a>
         <header class="no_landing">
             <div><a href="#inicio"><img id="logo" src="./images/logo.png" style="height: 50px; width: 50px;"></a> </div>
-            <div><a href="#personaje"> Personaje </a></div>
+            <div><a href="#personaje" onclick="addMargin('personajeId')"> Personaje </a></div>
             <div><a href="#habilidades"> Habilidades </a></div>
-            <div><a href="#enemigos"> Enemigos </a></div>
+            <div><a href="#enemigos" onclick="addMargin('enemigosId')"> Enemigos </a></div>
             <div><a href="#enemigos"> Influencias </a></div>
         </header>
         
-        <div class="personaje no_landing">
+        <div class="personaje no_landing" id="personajeId">
             <div id="personaje_imagen">
                 <img class="img_responsive front" src="images/spider-man.jpeg" alt="spiderman">
                 <img class="img_responsive back" src="images/peter-parker.jpg" alt="spiderman">
             </div>
             <div style="flex-direction: column;">
-
                 <h1> Peter Parker</h1>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nulla aut accusantium ipsa magnam nobis aliquam quae eius impedit, optio, placeat praesentium at iure voluptates modi ullam corporis? Veniam, at.
@@ -44,32 +44,37 @@
                 </p>        
             </div>
         </div>
-        <div class="habilidades no_landing">
-
+        <div class="habilidades no_landing flex-container-column">
+            <div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid error corporis veniam nostrum soluta nam possimus. Deleniti saepe odio, dolores eaque, quae eos voluptate quos ex iusto numquam porro fuga.</p>
+            </div>
+            
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique numquam nulla, praesentium laudantium quos cupiditate quasi aliquid saepe, sit animi eligendi! Odio, cum distinctio nihil assumenda hic neque laborum provident.</p>
+            </div>
+            
         </div>
-        <div class="no_landing"></div>
         <a name="enemigos"></a>
+        <div id="enemigosId" class="flex-container no_landing" style="align-items: center; justify-content: center; background-color: black;">
+            <ul>
+                <li onclick="setEnemy('Dr Octopus',1)">Dr Octopus</li>
+                <li onclick="setEnemy('Electro',2)">Electro</li>
+                <li onclick="setEnemy('Buitre',3)">Buitre</li>
+                <li onclick="setEnemy('Rhino',4)">Rhino</li>
+            </ul>
+        </div>
         <div class="enemigos no_landing">
-            <div >
-                <ul>
-                    <li onclick="setEnemy('Dr Octopus',1)">Dr Octopus</li>
-                    <li onclick="setEnemy('Electro',2)">Electro</li>
-                    <li onclick="setEnemy('Buitre',3)">Buitre</li>
-                    <li onclick="setEnemy('Rhino',4)">Rhino</li>
-                </ul>
+            <div class="flex-container-column">
+                <h1 id="nombre_enemigo"> Dr Octopus </h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum perferendis error reprehenderit eveniet sapiente necessitatibus fugit asperiores, odit, unde quidem sequi magnam, quasi obcaecati quae cumque veniam doloribus rerum suscipit?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, at repudiandae provident excepturi praesentium sint doloribus dicta doloremque officiis. Dolorem ea ab corporis necessitatibus accusamus omnis a maiores debitis libero.
+                </p>
             </div>
             <div>
-                <div class="flex-container-column">
-                    <h1 id="nombre_enemigo"> Dr Octopus </h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum perferendis error reprehenderit eveniet sapiente necessitatibus fugit asperiores, odit, unde quidem sequi magnam, quasi obcaecati quae cumque veniam doloribus rerum suscipit?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, at repudiandae provident excepturi praesentium sint doloribus dicta doloremque officiis. Dolorem ea ab corporis necessitatibus accusamus omnis a maiores debitis libero.
-                    </p>
-                </div>
-                <div>
-                    <img id="imagen_enemigo" class="img_responsive enemigos_imagen" src="images/octopus.jpeg">
-                </div>
+                <img id="imagen_enemigo" class="img_responsive" style="position: relative;" src="images/octopus.jpeg">
             </div>
+            
 
         </div>
         <div class="no_landing">
