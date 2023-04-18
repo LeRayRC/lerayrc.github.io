@@ -7,6 +7,7 @@
         <meta name="owner" content="Carlos Garcia">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <link rel="stylesheet" href="./styles/estilos.css">
+        <link rel="stylesheet" href="./styles/slideshow.css">
         <link rel="icon" type="image/x-icon" href="./images/spiderman.ico">
         <script src="scripts/setEnemy.js"></script>
         <script src="scripts/addMargin.js"></script>
@@ -31,7 +32,7 @@
         </div>
         <a name="personaje"></a>
         <header class="no_landing">
-            <div><a href="#inicio"><img id="logo" src="./images/logo.png" style="height: 50px; width: 50px; margin-left: 0px;"></a> </div>
+            <div><a href="#inicio"><img id="logo" src="./images/logo.png"></a> </div>
             <div><a href="#personaje" onclick="addMargin('personajeId')"> Personaje </a></div>
             <div><a href="#habilidades"> Habilidades </a></div>
             <div><a href="#enemigos" onclick="addMargin('enemigosId')"> Enemigos </a></div>
@@ -54,23 +55,56 @@
             </div>
             <div style="flex-direction: column;">
                 <h1> Peter Parker</h1>
-                <p>
+                <p style="text-align: justify; text-justify: inter-character;">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nulla aut accusantium ipsa magnam nobis aliquam quae eius impedit, optio, placeat praesentium at iure voluptates modi ullam corporis? Veniam, at.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus aspernatur repudiandae vitae odit quo nesciunt beatae consectetur deserunt consequatur, minus labore doloremque voluptatem amet! Minus corporis exercitationem laudantium sunt. Eaque.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, fuga laudantium eaque ipsum debitis optio atque non officiis id quaerat omnis itaque eligendi soluta nulla corporis sapiente commodi neque recusandae.
-                </p>        
+                </p>
+                <p style="text-align: justify; text-justify: inter-character;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nulla aut accusantium ipsa magnam nobis aliquam quae eius impedit, optio, placeat praesentium at iure voluptates modi ullam corporis? Veniam, at.
+                </p>
+                <p style="text-align: justify; text-justify: inter-character;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nulla aut accusantium ipsa magnam nobis aliquam quae eius impedit, optio, placeat praesentium at iure voluptates modi ullam corporis? Veniam, at.
+                </p>       
             </div>
         </div>
-        <div class="habilidades no_landing flex-container-column">
-            <div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid error corporis veniam nostrum soluta nam possimus. Deleniti saepe odio, dolores eaque, quae eos voluptate quos ex iusto numquam porro fuga.</p>
+        <div class="habilidades no_landing flex-container-row">
+            <div style="align-items:flex-start; margin-top: 50px; flex-wrap: wrap; align-content: flex-start;">
+                <div class="dot" onclick="currentSlide(1)"><img src="./images/gadget1.jpg"></div> 
+                <div class="dot" onclick="currentSlide(2)"><img src="./images/gadget2.jpg"></div> 
+                <div class="dot" onclick="currentSlide(3)"><img src="./images/gadget3.jpg"></div>
+                <div class="dot" onclick="currentSlide(4)"><img src="./images/gadget4.jpg"></div>
+                <div class="dot" onclick="currentSlide(5)"><img src="./images/gadget5.jpg"></div> 
+                <div class="dot" onclick="currentSlide(6)"><img src="./images/gadget6.jpg"></div> 
+                <div class="dot" onclick="currentSlide(7)"><img src="./images/gadget7.jpg"></div>
+                <div class="dot" onclick="currentSlide(8)"><img src="./images/gadget8.jpg"></div> 
             </div>
-            
-            <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique numquam nulla, praesentium laudantium quos cupiditate quasi aliquid saepe, sit animi eligendi! Odio, cum distinctio nihil assumenda hic neque laborum provident.</p>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="./images/gadget1.jpg">
+                </div> 
+                <div class="mySlides fade">
+                    <img src="./images/gadget2.jpg">
+                </div> 
+                <div class="mySlides fade">
+                    <img src="./images/gadget3.jpg">
+                </div>
+                <div class="mySlides fade">
+                    <img src="./images/gadget4.jpg">
+                </div> 
+                <div class="mySlides fade">
+                    <img src="./images/gadget5.jpg">
+                </div> 
+                <div class="mySlides fade">
+                    <img src="./images/gadget6.jpg">
+                </div>
+                <div class="mySlides fade">
+                    <img src="./images/gadget7.jpg">
+                </div>
+                <div class="mySlides fade">
+                    <img src="./images/gadget8.jpg">
+                </div> 
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
             </div>
-            
-            
         </div>
             <a name="enemigos"></a>
         <div id="enemigosId" class="flex-container no_landing" style="align-items: center; justify-content: center; background-color: black;">
@@ -145,5 +179,6 @@
             </div>
         </footer>
         <script src="scripts/spiderman_scripts.js"></script>
+        <script src="scripts/slideshow.js"></script>
     </body>
 </html>
