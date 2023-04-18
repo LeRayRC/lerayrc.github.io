@@ -10,6 +10,7 @@
         <link rel="icon" type="image/x-icon" href="./images/spiderman.ico">
         <script src="scripts/setEnemy.js"></script>
         <script src="scripts/addMargin.js"></script>
+        <script src="scripts/topnav.js"></script>
     </head>
     <body>
         <a name="inicio"></a>
@@ -18,17 +19,33 @@
             <div><h1>SPIDERMAN Web</h1></div>
             <div>Click aqui</div>
         </div>
+        <div id="myLinks">
+            <div><a href="#personaje" onclick="addMargin('personajeId')"> Personaje </a></div>
+            <div><a href="#habilidades"> Habilidades </a></div>
+            <div><a href="#enemigos" onclick="addMargin('enemigosId')"> Enemigos </a></div>
+            <div><a href="#enemigos"> Influencias </a></div>
+        </div>
+
         <div class="no_landing">
             <iframe width="100%" height="800px" src="https://www.youtube.com/embed/Lddu3XraE0U?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <a name="personaje"></a>
         <header class="no_landing">
-            <div><a href="#inicio"><img id="logo" src="./images/logo.png" style="height: 50px; width: 50px;"></a> </div>
+            <div><a href="#inicio"><img id="logo" src="./images/logo.png" style="height: 50px; width: 50px; margin-left: 0px;"></a> </div>
             <div><a href="#personaje" onclick="addMargin('personajeId')"> Personaje </a></div>
             <div><a href="#habilidades"> Habilidades </a></div>
             <div><a href="#enemigos" onclick="addMargin('enemigosId')"> Enemigos </a></div>
             <div><a href="#enemigos"> Influencias </a></div>
+            <div><h1>Spiderman</h1></div>
+            <div>
+                <a href="#" onclick="verticalMenu()"> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                            </svg>
+                </a>
+            </div>
+            
         </header>
+        
         
         <div class="personaje no_landing" id="personajeId">
             <div id="personaje_imagen">

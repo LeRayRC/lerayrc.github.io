@@ -30,7 +30,7 @@ header, section, article, footer, aside, nav,h1{
 
 header{
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     background-color: rgb(129, 31, 31);
@@ -48,11 +48,41 @@ header{
 header a{
     color: white;
     text-decoration: none;
-    font-size: x-large;
+    font-size: large;
 }
 
 header a:hover{
     color: black;
+}
+
+header div{
+    margin: auto;
+}
+
+header div:nth-child(6){
+    display: none;
+}
+header div:nth-child(7){
+    display: none;
+}
+header div:nth-child(5){
+    margin-right: 0px;
+}
+header div:nth-child(1){
+    margin-left: 0px;
+}
+
+#myLinks {
+    display: none;
+    margin-top: 100px;
+  }
+
+#myLinks div{
+    display: flex;
+    margin: 15px;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
 }
 
 footer{
@@ -237,6 +267,28 @@ div ul li:hover{
     header{
         height: auto;
     }
+    header div:nth-child(1){
+        margin-left: 0px;
+    }
+    header div:nth-child(2){
+        display: none;
+    }
+    header div:nth-child(3){
+        display: none;
+    }
+    header div:nth-child(4){
+        display: none;
+    }
+    header div:nth-child(5){
+        display: none;
+    }
+    header div:nth-child(6){
+        display: block;
+    }
+    header div:nth-child(7){
+        display: block;
+        margin-right: 0px;
+    }
     footer{
         flex-direction: column;
         height: auto;
@@ -270,9 +322,36 @@ div ul li:hover{
     header{
         height: auto;
     }
+    header div{
+        margin: auto;
+    }
+    header div:nth-child(1){
+        margin-left: 0px;
+    }
+    header div:nth-child(2){
+        display: none;
+    }
+    header div:nth-child(3){
+        display: none;
+    }
+    header div:nth-child(4){
+        display: none;
+    }
+    header div:nth-child(5){
+        display: none;
+    }
+    header div:nth-child(6){
+        display: block;
+    }
+    header div:nth-child(7){
+        display: block;
+        margin-right: 0px;
+    }
     footer{
-        flex-direction: column;
+        flex-direction: row;
         height: auto;
+        flex-wrap: wrap;
+        font-size: small;
     }
     div ul li{
         font-size: 18px;
