@@ -58,10 +58,15 @@ header a:hover{
 footer{
     flex-direction: row;
     justify-content: space-evenly;
-    height: 80px;
+    height: 40px;
+    width: 100%;
     background-color: rgb(129, 31, 31);
     color: black;
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
 }
 
 footer img{
