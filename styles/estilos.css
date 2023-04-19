@@ -349,6 +349,13 @@ div ul li:hover{
         flex-direction: column;
         width: 100%;
     }
+    .habilidades{
+        flex-direction: column;
+        height: auto;
+    }
+    .habilidades div:not(.mySlides){
+        width: 100%;
+    }
 }
 @media only screen and (max-width:540px){
     #landing div, #landing div h1{
@@ -432,4 +439,11 @@ div ul li:hover{
     .contenedor-video{
         margin-top: 100px;
       }
+    .habilidades{
+        flex-direction: column;
+        height: auto;
+    }
+    .habilidades div:not(.mySlides){
+        width: 100%;
+    }
 }   

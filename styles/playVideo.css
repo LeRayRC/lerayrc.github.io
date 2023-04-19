@@ -1,0 +1,53 @@
+#local-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    width: 100%;
+    border-radius: 45px 45px 45px 45px;
+    overflow: hidden;
+}
+#local-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+#imagen-overlay-1, #imagen-overlay-2, #imagen-overlay-3, #imagen-overlay-4, #imagen-overlay-5, #imagen-overlay-6{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+#imagen-overlay-1 img{
+    width: 100%;
+    height: auto;
+}
+
+#imagen-overlay-2 img{
+    width: 100%;
+    height: auto;
+}
+
+#imagen-overlay-3 img{
+    width: 100%;
+    height: auto;
+}
+
+#imagen-overlay-4 img{
+    width: 100%;
+    height: auto;
+}
+
+#imagen-overlay-5 img{
+    width: 100%;
+    height: auto;
+}
+
+#imagen-overlay-6 img{
+    width: 100%;
+    height: auto;
+}
+

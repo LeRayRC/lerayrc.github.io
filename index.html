@@ -8,10 +8,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <link rel="stylesheet" href="./styles/estilos.css">
         <link rel="stylesheet" href="./styles/slideshow.css">
+        <link rel="stylesheet" href="./styles/playVideo.css">
         <link rel="icon" type="image/x-icon" href="./images/spiderman.ico">
         <script src="scripts/setEnemy.js"></script>
         <script src="scripts/addMargin.js"></script>
         <script src="scripts/topnav.js"></script>
+        <script src="scripts/playVideo.js"></script>
     </head>
     <body>
         <a name="inicio"></a>
@@ -66,44 +68,121 @@
                 </p>       
             </div>
         </div>
-        <div class="habilidades no_landing flex-container-row">
-            <div style="align-items:flex-start; margin-top: 50px; flex-wrap: wrap; align-content: flex-start;">
-                <div class="dot" onclick="currentSlide(1)"><img src="./images/gadget1.jpg"></div> 
-                <div class="dot" onclick="currentSlide(2)"><img src="./images/gadget2.jpg"></div> 
-                <div class="dot" onclick="currentSlide(3)"><img src="./images/gadget3.jpg"></div>
-                <div class="dot" onclick="currentSlide(4)"><img src="./images/gadget4.jpg"></div>
-                <div class="dot" onclick="currentSlide(5)"><img src="./images/gadget5.jpg"></div> 
-                <div class="dot" onclick="currentSlide(6)"><img src="./images/gadget6.jpg"></div> 
-                <div class="dot" onclick="currentSlide(7)"><img src="./images/gadget7.jpg"></div>
-                <div class="dot" onclick="currentSlide(8)"><img src="./images/gadget8.jpg"></div> 
+        <div class="habilidades no_landing">
+            <div class="flex-container-column">
+                <div style="width: 100%; align-items:flex-start; margin-top: 50px; flex-wrap: wrap; align-content: flex-start;">
+                    <div class="dot" onclick="currentSlide(1)"><img src="./images/gadget1.jpg"></div> 
+                    <div class="dot" onclick="currentSlide(2)"><img src="./images/gadget2.jpg"></div> 
+                    <div class="dot" onclick="currentSlide(3)"><img src="./images/gadget3.jpg"></div>
+                    <div class="dot" onclick="currentSlide(4)"><img src="./images/gadget4.jpg"></div>
+                    <div class="dot" onclick="currentSlide(5)"><img src="./images/gadget5.jpg"></div> 
+                    <div class="dot" onclick="currentSlide(6)"><img src="./images/gadget6.jpg"></div> 
+                </div>
+                <div class="flex-container-column" style="width: 100%;">
+                    <div>
+                        <h1 id="nombre_artilugio"> Lanza Telarañas</h1>
+                    </div>
+                    <div style="width: 75%;">
+                        <p id="descripcion_artilugio">
+                            Lanza redes y atrapa a los enemigos
+                        </p>
+                    </div>
+                </div>
             </div>
             <div class="slideshow-container">
                 <div class="mySlides fade">
-                    <img src="./images/gadget1.jpg">
+                    <div id="local-video" >
+                        <video muted id="local-video-1" controls>
+                            <source src="./video/weeb_shoot.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div id="imagen-overlay-1">
+                        <img src="./images/gadget1.jpg" >
+                    </div>
+                    <a class="play" onclick="playVideo(1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                            <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                          </svg>
+                    </a>
                 </div> 
                 <div class="mySlides fade">
-                    <img src="./images/gadget2.jpg">
+                    <div id="local-video">
+                        <video muted id="local-video-2" controls>
+                            <source src="./video/punch.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div id="imagen-overlay-2">
+                        <img src="./images/gadget2.jpg" >
+                    </div>
+                    <a class="play" onclick="playVideo(2)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                            <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                          </svg>
+                    </a>
                 </div> 
                 <div class="mySlides fade">
-                    <img src="./images/gadget3.jpg">
+                    <div id="local-video">
+                        <video muted id="local-video-3" controls>
+                            <source src="./video/jump.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div id="imagen-overlay-3">
+                        <img src="./images/gadget3.jpg" >
+                    </div>
+                    <a class="play" onclick="playVideo(3)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                            <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                          </svg>
+                    </a>
                 </div>
                 <div class="mySlides fade">
-                    <img src="./images/gadget4.jpg">
+                    <div id="local-video">
+                        <video muted id="local-video-4" controls>
+                            <source src="./video/electrified.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div id="imagen-overlay-4">
+                        <img src="./images/gadget4.jpg" >
+                    </div>
+                    <a class="play" onclick="playVideo(4)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                            <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                          </svg>
+                    </a>
                 </div> 
                 <div class="mySlides fade">
-                    <img src="./images/gadget5.jpg">
+                    <div id="local-video">
+                        <video muted id="local-video-5" controls>
+                            <source src="./video/gravity.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div id="imagen-overlay-5">
+                        <img src="./images/gadget5.jpg" >
+                    </div>
+                    <a class="play" onclick="playVideo(5)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                            <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                          </svg>
+                    </a>
                 </div> 
                 <div class="mySlides fade">
-                    <img src="./images/gadget6.jpg">
+                    <div id="local-video">
+                        <video muted id="local-video-6" controls>
+                            <source src="./video/holodrone.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div id="imagen-overlay-6">
+                        <img src="./images/gadget6.jpg" >
+                    </div>
+                    <a class="play" onclick="playVideo(6)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                            <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                          </svg>
+                    </a>
                 </div>
-                <div class="mySlides fade">
-                    <img src="./images/gadget7.jpg">
-                </div>
-                <div class="mySlides fade">
-                    <img src="./images/gadget8.jpg">
-                </div> 
                 <a class="prev" onclick="plusSlides(-1)">❮</a>
                 <a class="next" onclick="plusSlides(1)">❯</a>
+                
             </div>
         </div>
             <a name="enemigos"></a>
