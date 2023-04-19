@@ -10,7 +10,7 @@ function currentSlide(n) {
   var desc_artilugio=document.getElementById("descripcion_artilugio");
   switch(n){
     case 1:
-        nombre_artilugio.innerHTML = "Lanza Telarañas"
+        nombre_artilugio.innerHTML = "Lanzaredes"
         desc_artilugio.innerHTML = "Lanza redes y atrapa a los enemigos"
         break;
     case 2:

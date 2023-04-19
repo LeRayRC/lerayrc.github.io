@@ -27,7 +27,6 @@ header, section, article, footer, aside, nav,h1{
 }
 
 
-
 header{
     flex-direction: row;
     justify-content: space-between;
@@ -203,6 +202,7 @@ footer div{
 
 
 .habilidades{
+    display: flex;
     justify-content: space-between;
     width: 100%;
     height: 700px;
@@ -239,6 +239,35 @@ footer div{
     height: 100%;
     border: 0px red solid;
     padding: 20px;
+}
+
+.aliados{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 700px;
+    background-color: white
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../images/contact-transparent.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+    background-color: rgba(0, 0, 0);
+}
+
+.horizontal_decoration{
+    display: flex;
+    width: 100%; 
+    height: 200px;
+    background-color: #151D20;
 }
 
 div ul li{
@@ -286,6 +315,12 @@ div ul li:hover{
 
 .no_landing{
     display: none;
+}
+
+input, textarea{
+    color: white;
+    background-color: #151D20;
+
 }
 /* Media */
 @media only screen and (min-width:769px){

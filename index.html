@@ -26,7 +26,7 @@
             <div><a href="#personaje" onclick="addMargin('personajeId')"> Personaje </a></div>
             <div><a href="#habilidades" onclick="addMargin('habilidadesId')"> Habilidades </a></div>
             <div><a href="#enemigos" onclick="addMargin('enemigosId')"> Enemigos </a></div>
-            <div><a href="#enemigos"> Influencias </a></div>
+            <div><a href="#aliados" onclick="addMargin('aliadosId')"> Aliados </a></div>
         </div>
 
         <div class="no_landing contenedor-video">
@@ -38,7 +38,7 @@
             <div><a href="#personaje" onclick="addMargin('personajeId')"> Personaje </a></div>
             <div><a href="#habilidades" onclick="addMargin('habilidadesId')"> Habilidades </a></div>
             <div><a href="#enemigos" onclick="addMargin('enemigosId')"> Enemigos </a></div>
-            <div><a href="#enemigos"> Influencias </a></div>
+            <div><a href="#aliados" onclick="addMargin('aliadosId')"> Aliados </a></div>
             <div><h1 style="font-size: large;">Spiderman</h1></div>
             <div>
                 <a href="#" onclick="verticalMenu()"> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
@@ -81,11 +81,11 @@
                 </div>
                 <div class="flex-container-column" style="width: 100%;">
                     <div>
-                        <h1 id="nombre_artilugio"> Lanza Telarañas</h1>
+                        <h1 id="nombre_artilugio"> Lanzaredes</h1>
                     </div>
                     <div style="width: 75%;">
                         <p id="descripcion_artilugio">
-                            Lanza redes y atrapa a los enemigos
+                            Lanzaredes y atrapa a los enemigos
                         </p>
                     </div>
                 </div>
@@ -206,24 +206,59 @@
             <div>
                 <img id="imagen_enemigo" class="img_responsive" style="position: relative;" src="images/octopus.jpeg">
             </div>
-            
+        </div>
+        <div class="horizontal_decoration no_landing"> 
+        </div>
+        <a name="aliados"></a>
+        <div class="aliados no_landing" id="aliadosId"> 
 
         </div>
-        <div class="no_landing">
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <a name="contacto"></a>
+        <div class="contacto no_landing" id="contactoId"> 
+            <h1> Formulario de contacto</h1>
+            <form action="mailto:garciaroi@esat-alumni.com" method="post" enctype="text/plain">
+                <table width="600" height="400" border="2" cellpadding="10">
+                  <tr>
+                   <td> Nombre </td> 
+                   <td> <input type="text" name="nombre" value="Introduce un nombre" size="30"></td>
+                  </tr>
+                  <tr>
+                   <td> Apellido </td> 
+                   <td> <input type="text" name="apellido" value="Introduce un apellido" size="30"></td>
+                  </tr>
+                  <tr>
+                   <td> Email </td> 
+                   <td> <input type="email" value="introduce un email"> <br></td>
+                  </tr>
+                  <tr>
+                   <td style="text-align: center; resize: none;" colspan="2"> Descripcion <br>
+                     <textarea name="descripcion" rows="15" cols="60">
+                       
+                     </textarea> 
+                   </td>
+                  </tr>
+                  <tr>
+                   <td style="text-align: center;"> <input style="text-align: center;" type="submit" value="Enviar"></td> 
+                   <td style="text-align: center;"> <input style="text-align: center;" type="reset" value="Borrar datos"> </td>
+                  </tr>
+                </table>
+              </form>
         </div>
+        <!--<div class="no_landing">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>-->
         <footer class="no_landing">
             <div>
                 Academic Web made by Carlos Garcia
             </div>
             <div>
-                <a href="#">Contacto</a>
+                <a href="#contacto">Contacto</a>
             </div>
             <div>
                 <a href="https://www.linkedin.com/in/carlos-garc%C3%ADa-roig-8a1536192/" target="_blank"><img src="./images/linkedin.png"></a>

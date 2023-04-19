@@ -9,6 +9,7 @@ window.onscroll = function(){
     var personaje = document.getElementById("personajeId");
     var enemigo = document.getElementById("enemigosId");
     var habilidades = document.getElementById("habilidadesId");
+    var habilidades = document.getElementById("aliadosId");
     if(scrolledTop - personaje.offsetTop > 100){
         personaje.style.marginTop = "0px"
     }
@@ -18,5 +19,7 @@ window.onscroll = function(){
     if(scrolledTop - habilidades.offsetTop > 100){
         habilidades.style.marginTop = "0px"
     }
-    
+    if(scrolledTop - aliados.offsetTop > 100){
+        aliados.style.marginTop = "0px"
+    }
 }
