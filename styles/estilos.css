@@ -33,7 +33,7 @@ header{
     align-items: center;
     flex-wrap: wrap;
     background-color: rgb(129, 31, 31);
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     color: black;
     padding: 20px;
     width: 100%;
@@ -115,6 +115,7 @@ footer{
     position: fixed;
     bottom: 0;
     left: 0;
+    border-top: 2px solid black;
     z-index: 9999;
 }
 
@@ -259,7 +260,7 @@ footer div{
     background-position: 50%;
     align-items: center;
     width: 100%;
-    height: 700px;
+    height: 800px;
     background-color: rgba(0, 0, 0);
 }
 
@@ -317,10 +318,19 @@ div ul li:hover{
     display: none;
 }
 
-#form{
+#form-type{
     margin: 20px;
     width: 600px;
-    height: 400px;
+    height: 500px;
+    margin-bottom: 100px;
+}
+
+.myBox {
+    border: none;
+    padding: 5px;
+    width: 100%;
+    height: 100px;
+    overflow: scroll;
 }
 
 input, textarea{
@@ -407,11 +417,13 @@ input, textarea{
         width: 100%;
         height: auto;
     }
-    #form{
+    #form-type{
         margin: 20px;
         width: 100%;
         height: auto;
+        margin-bottom: 100px;
     }
+    
 }
 @media only screen and (max-width:540px){
     #landing div, #landing div h1{
@@ -454,6 +466,7 @@ input, textarea{
     }
     footer div{
         padding: 5px;
+        
     }
     div ul li{
         font-size: 18px;
@@ -504,9 +517,10 @@ input, textarea{
     }
 
 
-    #form{
+    #form-type{
         margin: 20px;
         width: 100%;
         height: auto;
+        margin-bottom: 100px;
     }
 }   

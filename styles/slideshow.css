@@ -61,26 +61,29 @@
   
   /* The dots/bullets/indicators */
   .dot {
-    flex-basis: 16%;
+    flex-basis: 25%;
     margin-bottom: 10px;
+    margin-right: 10px;
     padding: 10px;
     cursor: pointer;
-    height: 100px;
-    width: 100px;
+    width: 100%;
+    height: auto;
     background-color: red;
     border-radius: 50%;
+    overflow: hidden;
     box-sizing: border-box;
     transition: background-color 0.6s ease;
   }
 
   .dot img{
-    width: 100px;
-    height: 100px;
+    width: 125%;
+    height: auto;
     border-radius: 50%;
+    overflow: hidden;
   }
 
   .dot img:hover{
-    border: 1px solid white;
+    border: 2px solid white;
 
   }
   
