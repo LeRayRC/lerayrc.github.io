@@ -417,12 +417,22 @@ input, textarea{
         width: 100%;
         height: auto;
     }
+    .contacto h1{
+        font-size: medium;
+    }
     #form-type{
         margin: 20px;
         width: 100%;
         height: auto;
         margin-bottom: 100px;
     }
+    #nombre_artilugio{
+        font-size: medium;
+    }
+    td, tr, input{
+        font-size: 10px;
+    }
+
     
 }
 @media only screen and (max-width:540px){
@@ -516,11 +526,25 @@ input, textarea{
         width: 100%;
     }
 
-
+    .contacto h1{
+        font-size: medium;
+    }
     #form-type{
         margin: 20px;
         width: 100%;
         height: auto;
         margin-bottom: 100px;
     }
-}   
+
+    #nombre_artilugio{
+        font-size: medium;
+    }
+
+    td, tr, input{
+        font-size: 10px;
+    }
+
+    .myBox p{
+        font-size: 8px;
+    }
+}
