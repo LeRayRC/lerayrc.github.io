@@ -374,8 +374,9 @@ input, textarea{
         margin-right: 0px;
     }
     footer{
-        flex-direction: column;
+        flex-direction: row;
         height: auto;
+        font-size: 12px;
     }
     footer div{
         padding: 5px;
@@ -425,6 +426,7 @@ input, textarea{
         width: 100%;
         height: auto;
         margin-bottom: 100px;
+        overflow: scroll;
     }
     #nombre_artilugio{
         font-size: medium;
@@ -472,7 +474,7 @@ input, textarea{
         flex-direction: row;
         height: 60px;
         flex-wrap: wrap;
-        font-size: small;
+        font-size: 12px;
     }
     footer div{
         padding: 5px;
@@ -534,6 +536,7 @@ input, textarea{
         width: 100%;
         height: auto;
         margin-bottom: 100px;
+        overflow: scroll;
     }
 
     #nombre_artilugio{

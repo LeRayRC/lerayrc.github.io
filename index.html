@@ -14,6 +14,7 @@
         <script src="scripts/addMargin.js"></script>
         <script src="scripts/topnav.js"></script>
         <script src="scripts/playVideo.js"></script>
+        <script src="scripts/validateForm.js"></script>
     </head>
     <body>
         <a name="inicio"></a>
@@ -222,7 +223,7 @@
             <h1 style="text-align: center;"> Formulario de contacto</h1>
             <div id="form-type">
                     
-                <form  action="mailto:garciaroi@esat-alumni.com" method="post" enctype="text/plain">
+                <form  action="mailto:garciaroi@esat-alumni.com" method="post" enctype="text/plain" onsubmit="return validateForm()">
                     <table style="border: 1px; margin: auto;" cellpadding="10">
                         <tr>
                             <td> Nombre </td> 
@@ -249,7 +250,7 @@
                             <td style="text-align: center;"> <input style="text-align: center;" type="reset" value="Borrar datos"> </td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox"></td>
+                            <td><input id="accept_policy" type="checkbox"></td>
                             <td> Politica de privacidad</td>
                         </tr>
                         <tr>
@@ -263,19 +264,12 @@
                 </form>
             </div>
         </div>
-    
-        <!--<div class="no_landing">
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        </div>-->
         <footer class="no_landing">
             <div>
                 Academic Web made by Carlos Garcia
+            </div>
+            <div>
+                <a href="#contacto">Politica privacidad</a>
             </div>
             <div>
                 <a href="#contacto">Contacto</a>
