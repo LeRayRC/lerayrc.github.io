@@ -246,10 +246,67 @@ footer div{
 
 .aliados{
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     width: 100%;
-    height: 700px;
-    background-color: #151D20
+    height: auto;
+    padding: 50px;
+    background-color: #151D20;
+}
+
+.aliados div{
+    
+    
+    margin-bottom: 20px;
+}
+
+.aliado_imagen{
+    width: 40%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.aliado_imagen::-weblit-scrollbar{
+    width: 0px;
+    background-color: transparent;
+}
+
+.aliado_imagen div{
+    width: 100%;
+    height: auto;
+}
+.aliado_imagen img{
+    width: 100%;
+    border-radius: 45px;
+    height: auto;
+    transition: opacity 0.5s ease-in-out;;
+}
+
+
+.aliado_texto{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.aliado_imagen:hover img{
+    opacity: 0.2;
+    border: 2px solid white;
+}
+
+.aliado_imagen:hover .aliado_texto{
+    display: flex;
 }
 
 .contacto{
@@ -269,7 +326,7 @@ footer div{
 .horizontal_decoration{
     display: flex;
     width: 100%; 
-    height: 200px;
+    height: 50px;
     background-color: white;
 }
 
@@ -413,12 +470,16 @@ input, textarea{
 
     .aliados{
         width: 100%;
-        height: 100px;
+        height: auto;
+    }
+
+    .aliado_imagen{
+        width: 100%;
     }
 
     .contacto{
         width: 100%;
-        height: auto;
+        /* height: auto; */
     }
     .contacto h1{
         font-size: medium;
@@ -436,7 +497,9 @@ input, textarea{
     td, tr, input{
         font-size: 10px;
     }
-
+    .aliado_texto{
+        font-size: 14px;
+    }
     
 }
 @media only screen and (max-width:540px){
@@ -529,6 +592,18 @@ input, textarea{
     .habilidades div:not(.mySlides){
         width: 100%;
     }
+    .aliados{
+        width: 100%;
+        height: auto;
+    }
+
+    .aliado_imagen{
+        width: 100%;
+        
+    }
+    .aliado_imagen div{
+        overflow: scroll;
+    }
 
     .contacto h1{
         font-size: medium;
@@ -551,5 +626,10 @@ input, textarea{
 
     .myBox p{
         font-size: 8px;
+    }
+
+    .aliado_texto{
+        font-size: 12px;
+        overflow: scroll;
     }
 }
