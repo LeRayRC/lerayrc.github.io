@@ -19,7 +19,11 @@
     width: 80%;
     height: 80%;
     position: relative;
-    overflow: scroll;
+    overflow-y: auto;
+}
+
+.popup::-webkit-scrollbar{
+    display: none;
 }
 .close {
     position: absolute;

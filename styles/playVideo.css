@@ -51,3 +51,6 @@
     height: auto;
 }
 
+.play{
+    z-index: 9000;
+}

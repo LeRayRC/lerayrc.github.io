@@ -2,7 +2,8 @@ let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  // showSlides(slideIndex += n);
+  currentSlide(slideIndex += n);
 }
 
 function currentSlide(n) {
@@ -33,6 +34,11 @@ function currentSlide(n) {
         nombre_artilugio.innerHTML = "Holodron"
         desc_artilugio.innerHTML = "Invoca un Holodron que lucha a tu lado y distrae a los enemigos durante un breve lapso de tiempo"
         break;
+    default:
+        nombre_artilugio.innerHTML = "Lanzaredes"
+        desc_artilugio.innerHTML = "Lanza redes y atrapa a los enemigos"
+        break;
+
 }
   showSlides(slideIndex = n);
   
