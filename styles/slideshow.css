@@ -124,4 +124,7 @@
     .mySlides div.gadget_video{
       height: 300px;
     }
+    .dot{
+      flex-basis: 40%;
+    }
   }

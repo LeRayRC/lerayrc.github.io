@@ -28,7 +28,7 @@ function currentSlide(n) {
         break;
     case 5:
         nombre_artilugio.innerHTML = "Pozo Gravitatorio"
-        desc_artilugio.innerHTML = "Crea un vortice gravitatoria que atrapa a los enemigos impidiendo que escapen durante unos segundos, dejandolos a merced de otros ataques"
+        desc_artilugio.innerHTML = "Crea un vortice gravitatorio que atrapa a los enemigos impidiendo que escapen durante unos segundos, dejandolos a merced de otros ataques"
         break;
     case 6:
         nombre_artilugio.innerHTML = "Holodron"

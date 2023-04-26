@@ -408,6 +408,10 @@ div ul li:hover{
     overflow-y: auto;
 }
 
+.myBox::-webkit-scrollbar{
+    display: none;
+}
+
 input, textarea{
     color: white;
     background-color: #151D20;
