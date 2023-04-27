@@ -25,6 +25,7 @@ body::-webkit-scrollbar{
     display: none;
 }
 
+
 /* Elementos de neutralidad */
 header, section, article, footer, aside, nav,h1{
     display: flex;
@@ -310,8 +311,7 @@ footer div{
 }
 
 .aliado_texto div{
-    max-height: 100px;
-    overflow-y: auto;
+    max-height: 200px;
 }
 
 .aliado_texto h1{
@@ -426,9 +426,12 @@ input, textarea{
     width: 100%;
 }
 /* Media */
-@media only screen and (min-width:769px){
-    /* styles for mobile browsers smaller than 480px; (iPhone) */
-    
+@media only screen and (min-width:780px) and (max-width:960px) {
+    .aliado_texto div{
+        max-height: 100px;
+        overflow-y: auto;
+        font-size:  14px;
+    }
 }
 @media only screen and (min-width:541px) and (max-width:769px) {
     #landing div, #landing div h1{
@@ -531,6 +534,7 @@ input, textarea{
 
     .aliado_texto div{
         max-height: 100px;
+        overflow-y: auto;
     }
     
 }
@@ -663,5 +667,6 @@ input, textarea{
 
     .aliado_texto div{
         max-height: 75px;
+        overflow-y: auto;
     }
 }
