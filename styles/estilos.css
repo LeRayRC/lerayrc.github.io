@@ -10,6 +10,7 @@
     /*background-color: black;*/
     color: whitesmoke;
     font-family: spiderman;
+    scroll-behavior: smooth;
 }
 
 html, body{
@@ -406,11 +407,13 @@ div ul li:hover{
     width: 100%;
     height: 100px;
     overflow-y: auto;
+    overflow-x: auto;
 }
 
 .myBox::-webkit-scrollbar{
     display: none;
 }
+
 
 input, textarea{
     color: white;
