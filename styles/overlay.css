@@ -20,11 +20,9 @@
     height: 80%;
     position: relative;
     overflow-y: auto;
+    scrollbar-color: rgb(129, 31, 31);;
 }
 
-.popup::-webkit-scrollbar{
-    display: none;
-}
 .close {
     position: absolute;
     top: 0;
