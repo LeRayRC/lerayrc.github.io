@@ -1,3 +1,10 @@
+.project_image{
+    width: 50%;
+    height: auto;
+}
+
 @media only screen and (max-width:540px){
-    
+    .project_image{
+        width: 90%;
+    }
 }
