@@ -24,11 +24,11 @@ function currentSlide(n) {
         break;
     case 4:
         nombre_artilugio.innerHTML = "Mina Electrica"
-        desc_artilugio.innerHTML = "Trampa electrica perfecta para misiones sigilosas "
+        desc_artilugio.innerHTML = "Trampa elÉctrica perfecta para misiones sigilosas "
         break;
     case 5:
         nombre_artilugio.innerHTML = "Pozo Gravitatorio"
-        desc_artilugio.innerHTML = "Crea un vortice gravitatorio que atrapa a los enemigos impidiendo que escapen durante unos segundos, dejandolos a merced de otros ataques"
+        desc_artilugio.innerHTML = "Crea un vÓrtice gravitatorio que atrapa a los enemigos impidiendo que escapen durante unos segundos, dejandolos a merced de otros ataques"
         break;
     case 6:
         nombre_artilugio.innerHTML = "Holodron"
