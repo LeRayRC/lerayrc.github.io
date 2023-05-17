@@ -25,7 +25,6 @@ body::-webkit-scrollbar{
     display: none;
 }
 
-
 /* Elementos de neutralidad */
 header, section, article, footer, aside, nav,h1{
     display: flex;
@@ -444,8 +443,15 @@ input, textarea{
         overflow-y: auto;
         font-size:  14px;
     }
+
+    *{
+        scroll-behavior: auto;
+    }
 }
 @media only screen and (min-width:541px) and (max-width:769px) {
+    *{
+        scroll-behavior: auto;
+    }
     #landing div, #landing div h1{
         color: white;
         font-size: 42px;
@@ -551,6 +557,10 @@ input, textarea{
     
 }
 @media only screen and (max-width:540px){
+    *{
+        scroll-behavior: auto;
+    }
+    
     #landing div, #landing div h1{
         color: white;
         font-size: 24px;
