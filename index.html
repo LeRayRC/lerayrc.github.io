@@ -10,8 +10,39 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <style>
-    
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden; /* Ocultar desplazamiento horizontal */
+      width: 100%; /* Asegurar que el ancho no supere el viewport */
+      box-sizing: border-box;
+    }
+
     #hero {
+      position: relative;
+      overflow: hidden; /* Evitar contenido fuera del viewport */
+      width: 100%; /* Asegurarte de que el ancho no supere el viewport */
+      box-sizing: border-box; /* Incluir padding y borde en el ancho */
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 0 1rem; /* Espaciado interno en móviles para evitar desbordes */
+      box-sizing: border-box; /* Evitar desbordes por padding */
+    }
+
+    #particles-js {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Prevenir contenido fuera del contenedor */
+    }
+
+    /* #hero {
       position: relative;
       overflow: hidden;
     }
@@ -27,7 +58,26 @@
     .hero-content {
       position: relative;
       z-index: 1;
+    } */
+
+    #hero h2 {
+      font-size: 2rem; /* Reducir tamaño del texto en móviles */
+      line-height: 1.2; /* Ajustar el espacio entre líneas */
+      word-wrap: break-word; /* Forzar quiebres de línea si es necesario */
+      margin: 0 auto;
+      padding: 0 1rem;
     }
+
+    #hero p {
+      font-size: 1rem; /* Ajustar tamaño del texto */
+      margin: 0 auto;
+      padding: 0 1rem;
+      max-width: 90%; /* Limitar el ancho del párrafo */
+    }
+
+
+
+
     .hidden { display: none; }
     
     .projects-container {
@@ -132,12 +182,29 @@
   /* Responsividad para pantallas pequeñas */
   @media (max-width: 640px) {
   .projects-container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Aún más compacto en móviles */
   }
 
   .project {
-    min-height: 300px;
-    max-height: 320px;
+    min-height: 250px; /* Altura más pequeña en móviles */
+    max-height: 300px;
+  }
+
+  .project img {
+    max-height: 80px; /* Imagen aún más pequeña en móviles */
+  }
+
+  .filter-btn {
+    padding: 8px 12px; /* Reducir tamaño de los botones */
+    font-size: 0.8rem; /* Tamaño más pequeño */
+  }
+
+  #hero h2 {
+    font-size: 1.5rem; /* Texto más pequeño en pantallas muy pequeñas */
+  }
+
+  #hero p {
+    font-size: 0.9rem;
   }
 }
   
@@ -192,7 +259,7 @@
   <section id="portfolio" class="py-20 bg-gray-100">
     <div class="container mx-auto px-6 text-center">
       <h2 class="text-4xl font-merriweather text-red-600 mb-6">Mis Proyectos</h2>
-      <div class="flex justify-center space-x-4 mb-8">
+      <div class="flex justify-center space-x-1 mb-8">
         <button class="filter-btn active" data-filter="all">Todos</button>
         <button class="filter-btn" data-filter="unity">Unity</button>
         <button class="filter-btn" data-filter="unreal">Unreal</button>
@@ -332,6 +399,16 @@
       },
     });
 
+
+    window.addEventListener('resize', () => {
+      const hero = document.getElementById('hero');
+      const particles = document.getElementById('particles-js');
+      if (hero && particles) {
+        particles.style.width = `${hero.offsetWidth}px`;
+        particles.style.height = `${hero.offsetHeight}px`;
+      }
+    });
+
     function toggleProject(projectElement) {
       document.querySelectorAll('.project').forEach(proj => proj.classList.remove('expanded'));
       projectElement.classList.add('expanded');
@@ -356,38 +433,73 @@
     const projectsContainer = document.querySelector('.projects-container');
     const projects = document.querySelectorAll('.project');
     const filterButtons = document.querySelectorAll('.filter-btn');
-
     filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        // Eliminar la clase activa de todos los botones
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        // Agregar la clase activa al botón actual
-        button.classList.add('active');
+  button.addEventListener('click', () => {
+    // Eliminar la clase activa de todos los botones
+    filterButtons.forEach(btn => btn.classList.remove('active'));
+    // Agregar la clase activa al botón actual
+    button.classList.add('active');
 
-        // Obtener el filtro seleccionado
-        const filter = button.getAttribute('data-filter');
+    // Obtener el filtro seleccionado
+    const filter = button.getAttribute('data-filter');
 
-        // Mostrar/Ocultar proyectos
-        projects.forEach(project => {
-          if (filter === 'all' || project.classList.contains(filter)) {
-            project.classList.remove('hidden'); // Mostrar proyecto
-          } else {
-            project.classList.add('hidden'); // Ocultar proyecto
-          }
-        });
-
-        // Ajustar la altura del contenedor al contenido visible
-        setTimeout(() => {
-          const visibleProjects = Array.from(projects).filter(
-            project => !project.classList.contains('hidden')
-          );
-          const newHeight = visibleProjects.length
-            ? visibleProjects[0].offsetHeight * Math.ceil(visibleProjects.length / getComputedStyle(projectsContainer).gridTemplateColumns.split(' ').length)
-            : 0;
-          projectsContainer.style.height = `${newHeight}px`;
-        }, 50); // Retraso para asegurar que los proyectos visibles están calculados
-      });
+    // Mostrar/Ocultar proyectos
+    projects.forEach(project => {
+      if (filter === 'all' || project.classList.contains(filter)) {
+        project.classList.remove('hidden');
+      } else {
+        project.classList.add('hidden');
+      }
     });
+
+    // Ajustar dinámicamente el alto del contenedor
+    setTimeout(() => {
+      const visibleProjects = Array.from(projects).filter(
+        project => !project.classList.contains('hidden')
+      );
+
+      // Calcular el número de filas dinámicamente
+      const columns = window.getComputedStyle(projectsContainer)
+        .gridTemplateColumns.split(' ').length;
+      const rows = Math.ceil(visibleProjects.length / columns);
+
+      // Ajustar la altura en función del número de filas
+      const newHeight = rows * 360; // Altura fija para cada fila (360px)
+      projectsContainer.style.height = `${newHeight}px`;
+    }, 50); // Retraso para garantizar que los proyectos visibles se calculen correctamente
+  });
+});
+    // filterButtons.forEach(button => {
+    //   button.addEventListener('click', () => {
+    //     // Eliminar la clase activa de todos los botones
+    //     filterButtons.forEach(btn => btn.classList.remove('active'));
+    //     // Agregar la clase activa al botón actual
+    //     button.classList.add('active');
+
+    //     // Obtener el filtro seleccionado
+    //     const filter = button.getAttribute('data-filter');
+
+    //     // Mostrar/Ocultar proyectos
+    //     projects.forEach(project => {
+    //       if (filter === 'all' || project.classList.contains(filter)) {
+    //         project.classList.remove('hidden'); // Mostrar proyecto
+    //       } else {
+    //         project.classList.add('hidden'); // Ocultar proyecto
+    //       }
+    //     });
+
+    //     // Ajustar la altura del contenedor al contenido visible
+    //     setTimeout(() => {
+    //       const visibleProjects = Array.from(projects).filter(
+    //         project => !project.classList.contains('hidden')
+    //       );
+    //       const newHeight = visibleProjects.length
+    //         ? visibleProjects[0].offsetHeight * Math.ceil(visibleProjects.length / getComputedStyle(projectsContainer).gridTemplateColumns.split(' ').length)
+    //         : 0;
+    //       projectsContainer.style.height = `${newHeight}px`;
+    //     }, 50); // Retraso para asegurar que los proyectos visibles están calculados
+    //   });
+    // });
   </script>
 </body>
 </html>
