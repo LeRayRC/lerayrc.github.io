@@ -1,341 +1,393 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <title> Spider-man</title>
-        <meta charset="UTF-8">
-        <meta name="description" content="Web academica sobre Spiderman">
-        <meta name="keywords" content="Spiderman,Insomniac">
-        <meta name="author" content="Carlos Garcia">
-        <meta name="owner" content="Carlos Garcia">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <link rel="stylesheet" href="./styles/estilos.css">
-        <link rel="stylesheet" href="./styles/slideshow.css">
-        <link rel="stylesheet" href="./styles/playVideo.css">
-        <link rel="stylesheet" href="./styles/overlay.css">
-        <link rel="icon" type="image/x-icon" href="./images/spiderman.ico"> 
-        <script src="scripts/setEnemy.js"></script>
-        
-        <script src="scripts/topnav.js"></script>
-        <script src="scripts/playVideo.js"></script>
-        <script src="scripts/validateForm.js"></script>
-        <script src="scripts/overlay_privacy.js"></script>
-    </head>
-    <body>
-        <a name="inicio"></a>
-        <div id="landing" onclick="landing_shrink()">
-            <div id="landing_gif"></div>
-            <div><h1>SPIDERMAN Web</h1></div>
-            <div>Click aquÍ</div>
-        </div>
-        <div id="myLinks">
-            <div><a href="#personaje" onclick="addMargin('personajeId')"> Protagonista </a></div>
-            <div><a href="#habilidades" onclick="addMargin('habilidadesId')"> Habilidades </a></div>
-            <div><a href="#enemigos" onclick="addMargin('enemigosId')"> Enemigos </a></div>
-            <div><a href="#aliados" onclick="addMargin('aliadosId')"> Aliados </a></div>
-        </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <style>
+    
+    #hero {
+      position: relative;
+      overflow: hidden;
+    }
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
 
-        <div class="no_landing contenedor-video">
-            <iframe src="https://www.youtube.com/embed/Lddu3XraE0U?autoplay=1&mute=1&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        <a name="personaje"></a>
-        <header class="no_landing">
-            <div><a href="#inicio"><img id="logo" src="./images/logo.png" alt="spider_logo"></a> </div>
-            <div><a href="#personaje" onclick="addMargin('personajeId')"> Protagonista </a></div>
-            <div><a href="#habilidades" onclick="addMargin('habilidadesId')"> Habilidades </a></div>
-            <div><a href="#enemigos" onclick="addMargin('enemigosId')"> Enemigos </a></div>
-            <div><a href="#aliados" onclick="addMargin('aliadosId')"> Aliados </a></div>
-            <div><h1 style="font-size: large;">Spiderman</h1></div>
-            <div>
-                <a href="#inicio" onclick="verticalMenu()"> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                            </svg>
-                </a>
-            </div>
-            
-        </header>
-        
-        
-        <div class="personaje no_landing" id="personajeId">
-            <div id="personaje_imagen">
-                <img class="img_responsive front" src="images/spider-man.jpeg" alt="spiderman">
-                <img class="img_responsive back" src="images/peter-parker.jpg" alt="spiderman">
-            </div>
-            <div style="flex-direction: column;">
-                <h1> Peter Parker</h1>
-                <p style="text-align: justify; text-justify: inter-character;">
-                    Parker es un joven estudiante de secundaria que adquiere habilidades sobrehumanas despuÉs de ser picado por una araña radiactiva en una exhibiciÓn cientÍfica.
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hidden { display: none; }
+    
+    .projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px)); /* Tamaño mínimo y máximo */
+  justify-content: center; /* Centrar los proyectos si hay pocos */
+  gap: 1.5rem; /* Espaciado entre proyectos */
+  padding: 1rem; /* Espaciado interno */
+  transition: height 0.3s ease; /* Ajustar altura suavemente */
+  overflow: visible; /* Ocultar contenido extra */
+}
 
-                    AdemÁs de su fuerza y agilidad sobrehumanas, Spider-Man posee una capacidad Única para trepar paredes, un sentido arÁcnido que le permite detectar el peligro cercano y lanzar telarañas que utiliza para balancearse por la ciudad.
-                </p>
-                <p style="text-align: justify; text-justify: inter-character;">
-                    A pesar de su capacidad para luchar contra el crimen, Parker es un personaje complejo y humano. Ha enfrentado numerosos desafÍos personales, como el fallecimiento de su tÍo Ben, quien le enseñÓ el valor de la responsabilidad y el sentido del deber.
-                </p>     
-            </div>
-        </div>
-        <a name="habilidades"></a>
-        <div class="habilidades no_landing" id="habilidadesId">
-            <div class="flex-container-column">
-                <div style="width: 100%; align-items:flex-start; margin-top: 50px; flex-wrap: wrap; align-content: flex-start;">
-                    <div class="dot" onclick="currentSlide(1)"><img src="./images/gadget1.jpg" alt="gadget_image"></div> 
-                    <div class="dot" onclick="currentSlide(2)"><img src="./images/gadget2.jpg" alt="gadget_image"></div> 
-                    <div class="dot" onclick="currentSlide(3)"><img src="./images/gadget3.jpg" alt="gadget_image"></div>
-                    <div class="dot" onclick="currentSlide(4)"><img src="./images/gadget4.jpg" alt="gadget_image"></div>
-                    <div class="dot" onclick="currentSlide(5)"><img src="./images/gadget5.jpg" alt="gadget_image"></div> 
-                    <div class="dot" onclick="currentSlide(6)"><img src="./images/gadget6.jpg" alt="gadget_image"></div> 
-                </div>
-                <div class="flex-container-column" style="width: 100%;">
-                    <div>
-                        <h1 id="nombre_artilugio"> Lanzaredes</h1>
-                    </div>
-                
-                    <div style="width: 75%; height: 200px;">
-                        <p id="descripcion_artilugio">
-                            Lanza redes y atrapa a los enemigos
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <div id="local-video" >
-                        <video muted id="local-video-1" controls>
-                            <source src="./video/weeb_shoot.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div id="imagen-overlay-1">
-                        <img src="./images/gadget1.jpg" alt="gadget1_image">
-                    </div>
-                    <a class="play" onclick="playVideo(1)">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
-                            <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
-                          </svg>
-                    </a>
-                </div> 
-                <div class="mySlides fade">
-                    <div id="local-video">
-                        <video muted id="local-video-2" controls>
-                            <source src="./video/punch.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div id="imagen-overlay-2">
-                        <img src="./images/gadget2.jpg" alt="gadget2_image">
-                    </div>
-                    <a class="play" onclick="playVideo(2)">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
-                            <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
-                          </svg>
-                    </a>
-                </div> 
-                <div class="mySlides fade">
-                    <div id="local-video">
-                        <video muted id="local-video-3" controls>
-                            <source src="./video/jump.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div id="imagen-overlay-3">
-                        <img src="./images/gadget3.jpg" alt="gadget3_image">
-                    </div>
-                    <a class="play" onclick="playVideo(3)">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
-                            <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
-                          </svg>
-                    </a>
-                </div>
-                <div class="mySlides fade">
-                    <div id="local-video">
-                        <video muted id="local-video-4" controls>
-                            <source src="./video/electrified.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div id="imagen-overlay-4">
-                        <img src="./images/gadget4.jpg" alt="gadget4_image">
-                    </div>
-                    <a class="play" onclick="playVideo(4)">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
-                            <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
-                          </svg>
-                    </a>
-                </div> 
-                <div class="mySlides fade">
-                    <div id="local-video">
-                        <video muted id="local-video-5" controls>
-                            <source src="./video/gravity.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div id="imagen-overlay-5">
-                        <img src="./images/gadget5.jpg" alt="gadget5_image">
-                    </div>
-                    <a class="play" onclick="playVideo(5)">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
-                            <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
-                          </svg>
-                    </a>
-                </div> 
-                <div class="mySlides fade">
-                    <div id="local-video">
-                        <video muted id="local-video-6" controls>
-                            <source src="./video/holodrone.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div id="imagen-overlay-6">
-                        <img src="./images/gadget6.jpg" alt="gadget6_image">
-                    </div>
-                    <a class="play" onclick="playVideo(6)">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
-                            <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
-                          </svg>
-                    </a>
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
-                
-            </div>
-        </div>
-            <a name="enemigos"></a>
-        <div id="enemigosId" class="flex-container no_landing" style="align-items: center; justify-content: center; background-color: black;">
-            <ul>
-                <li onclick="setEnemy('Dr Octopus',1)">Dr Octopus</li>
-                <li onclick="setEnemy('Electro',2)">Electro</li>
-                <li onclick="setEnemy('Buitre',3)">Buitre</li>
-                <li onclick="setEnemy('Rhino',4)">Rhino</li>
-            </ul>
-        </div>
-        <div class="enemigos no_landing">
-            <div class="flex-container-column">
-                <h1 id="nombre_enemigo"> Dr Octopus </h1>
-                <p id="texto_enemigo">
-                    Respetado cientÍfico que, AdemÁs de su inteligencia y habilidades cientÍficas, es un villano astuto y peligroso que ha amenazado a la ciudad de Nueva York y ha causado estragos y caos en varias ocasiones. Aunque en algunos momentos ha mostrado cierta redenciÓn, en general es un villano que ha hecho todo lo posible por destruir al hombre araña y llevar a cabo sus planes malÉficos.
-                </p>
-            </div>
-            <div>
-                <img id="imagen_enemigo" class="img_responsive" style="position: relative;" src="images/octopus.jpeg" alt="octopus_image">
-            </div>
-        </div>
-        <div class="horizontal_decoration no_landing"> 
-        </div>
-        <a name="aliados"></a>
-        <div class="aliados no_landing" id="aliadosId"> 
-                <div class="aliado_imagen">
-                    <img src="./images/mary_jane.png" alt="mary_jane_image">
-                    <div class="aliado_texto">
-                        <h1 style="margin-bottom: 20px;">Mary Jane</h1>
-                        <div>
-                            <div>
-                                Periodista especialista infiltrandose en diversos lugares para conseguir informacion valiosa con la que acabar con alguna organizaciÓn criminal
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="aliado_imagen">
-                    <img src="./images/miles_morales.jpg" alt="miles_morales_image">
-                    <div class="aliado_texto">
-                        <h1 style="margin-bottom: 20px;">Miles Morales</h1>
-                        <div>
-                            <div>
-                                Joven estudiante con poderes similares a Spiderman que le ayuda en la medida de lo posible, siempre que sus estudios lo permiten.
-                            </div>
-                        </div>
-                    </div>
-                </div>
- 
-                <div class="aliado_imagen">
-                    <img src="./images/black_cat.jpg" alt="black_cat_image">
-                    <div class="aliado_texto">
-                        <h1 style="margin-bottom: 20px;">Black Cat</h1>
-                        <div>
-                            <div>
-                                Ayuda a Spiderman en sus labores nocturnas contra los criminales de la ciudad de Nuea York. 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="aliado_imagen">
-                    <img src="./images/aunt_may.jpg" alt="aunt_may_image">
-                    <div class="aliado_texto">
-                        <h1 style="margin-bottom: 20px;">Tia May</h1>
-                        <div>
-                            <div>
-                                Familiar de Peter Parker que se encarga de ayudar a los mas desfavorecidos en el hogar FestÍn. TambiÉn ayuda en la medida de lo posible a Spiderman.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </div>
-        
-        <a name="contacto"></a>
-        
+/* Estilo de cada proyecto */
+.project {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  height: auto; /* Ajuste dinámico */
+  min-height: 320px; /* Evitar que las tarjetas se compriman demasiado */
+  max-height: 360px; /* Evitar que las tarjetas crezcan demasiado */
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
 
-        <div class="contacto no_landing" id="contactoId"> 
-            <h1 style="text-align: center;"> Formulario de contacto</h1>
-            <div id="form-type">
-                    
-                <form  action="mailto:garciaroi@esat-alumni.com" method="post" enctype="text/plain" onsubmit="return validateForm()">
-                    <table style="border: 1px; margin: auto;" cellpadding="10">
-                        <tr>
-                            <td> Nombre </td> 
-                            <td> <input type="text" name="nombre" placeholder="Nombre"></td>
-                        </tr>
-                        <tr>
-                            <td> Apellido </td> 
-                            <td> <input type="text" name="apellido"  placeholder="Apellido"></td>
-                        </tr>
-                        <tr>
-                            <td> Email </td> 
-                            <td> <input type="email"  placeholder="Email" width="100%"> <br></td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: center;" colspan="2"> Descripcion </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"> <textarea name="descripcion" rows="15" cols="1">
-                                
-                            </textarea> </td> 
-                        </tr>
-                        <tr>
-                            <td style="text-align: center;"> <input style="text-align: center;" type="submit" value="Enviar"></td> 
-                            <td style="text-align: center;"> <input style="text-align: center;" type="reset" value="Borrar datos"> </td>
-                        </tr>
-                        <tr>
-                            <td><input id="accept_policy" type="checkbox"></td>
-                            <td> Politica de privacidad</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><div class="myBox">
-                                <p><strong>POLÍTICA DE PRIVACIDAD</strong></p><p>El presente PolÍtica de Privacidad establece los tÉrminos en que Carlos GarcÍa usa y protege la informaciÓn que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañÍa estÁ comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de informaciÓn personal con la cual usted pueda ser identificado, lo hacemos asegurando que sÓlo se emplearÁ de acuerdo con los tÉrminos de este documento. Sin embargo esta PolÍtica de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta pÁgina para asegurarse que estÁ de acuerdo con dichos cambios.</p><p><strong>InformaciÓn que es recogida</strong></p><p>Nuestro sitio web podrÁ recoger informaciÓn personal por ejemplo: Nombre,&nbsp; informaciÓn de contacto como&nbsp; su direcciÓn de correo electrÓnica e informaciÓn demogrÁfica. AsÍ mismo cuando sea necesario podrÁ ser requerida informaciÓn especÍfica para procesar algÚn pedido o realizar una entrega o facturaciÓn.</p><p><strong>Uso de la informaciÓn recogida</strong></p><p>Nuestro sitio web emplea la informaciÓn con el fin de proporcionar el mejor servicio posible, particularmente para mantener un registro de usuarios, de pedidos en caso que aplique, y mejorar nuestros productos y servicios. &nbsp;Es posible que sean enviados correos electrÓnicos periÓdicamente a travÉs de nuestro sitio con ofertas especiales, nuevos productos y otra informaciÓn publicitaria que consideremos relevante para usted o que pueda brindarle algÚn beneficio, estos correos electrÓnicos serÁn enviados a la direcciÓn que usted proporcione y podrÁn ser cancelados en cualquier momento.</p><p>Carlos GarcÍa estÁ altamente comprometido para cumplir con el compromiso de mantener su informaciÓn segura. Usamos los sistemas mÁs avanzados y los actualizamos constantemente para asegurarnos que no exista ningÚn acceso no autorizado.</p><a href="https://noticiasatleticodemadrid.es/" target="_blank">noticias</a>. Usted puede aceptar o negar el uso de cookies, sin embargo la mayorÍa de navegadores aceptan cookies automÁticamente pues sirve para tener un mejor servicio web. TambiÉn usted puede cambiar la configuraciÓn de su ordenador para declinar las cookies. Si se declinan es posible que no pueda utilizar algunos de nuestros servicios.</p><p><strong>Enlaces a Terceros</strong></p><p>Este sitio web pudiera contener en laces a otros sitios que pudieran ser de su interÉs. Una vez que usted de clic en estos enlaces y abandone nuestra pÁgina, ya no tenemos control sobre al sitio al que es redirigido y por lo tanto no somos responsables de los <a href="https://plantillaterminosycondicionestiendaonline.com/" target="_blank">tÉrminos o privacidad</a> ni de la protecciÓn de sus datos en esos otros sitios terceros. Dichos sitios estÁn sujetos a sus propias polÍticas de privacidad por lo cual es recomendable que los consulte para confirmar que usted estÁ de acuerdo con estas.</p><p><strong>Control de su informaciÓn personal</strong></p><p>En cualquier momento usted puede restringir la recopilaciÓn o el uso de la informaciÓn personal que es proporcionada a nuestro sitio web.&nbsp; Cada vez que se le solicite rellenar un formulario, como el de alta de usuario, puede marcar o desmarcar la opciÓn de recibir informaciÓn por correo electrÓnico. &nbsp;En caso de que haya marcado la opciÓn de recibir nuestro boletÍn o publicidad usted puede cancelarla en cualquier momento.</p><p>Esta compañÍa no venderÁ, cederÁ ni distribuirÁ la informaciÓn personal que es recopilada sin su consentimiento, salvo que sea requerido por un juez con un orden judicial.</p><p>Carlos GarcÍa Se reserva el derecho de cambiar los tÉrminos de la presente PolÍtica de Privacidad en cualquier momento.</p><p>Esta politica de privacidad se han generado en <a href="https://politicadeprivacidadplantilla.com/" target="_blank">politicadeprivacidadplantilla.com</a>.<br></p>
-                            </div></td>
-                        </tr> 
-                    
-                        
-                    </table>
-                </form>
-            </div>
+  /* Estilo para el hover en el proyecto */
+  .project:hover {
+    transform: scale(1.03); /* Escalar ligeramente al pasar el ratón */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombra más intensa */
+  }
+
+  /* Imagen dentro del proyecto */
+  .project img {
+  max-height: 140px; /* Altura máxima para la imagen */
+  object-fit: contain; /* Ajustar imagen sin distorsionar */
+  width: auto;
+  margin-bottom: 1rem;
+}
+
+  /* Título del proyecto */
+  .project h3 {
+    margin: 0.5rem 0; /* Margen arriba y abajo */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+  }
+
+  /* Descripción del proyecto */
+  .project p {
+    font-size: 0.9rem; /* Tamaño de fuente */
+    color: #4a4a4a; /* Color del texto */
+    margin-bottom: 1rem; /* Espaciado inferior */
+  }
+
+  /* Botón de "Más Detalles" */
+  .project button {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+  /* Efecto hover en el botón */
+  .project button:hover {
+  background-color: #b91c1c;
+}
+
+  /* Proyectos ocultos */
+  .project.hidden {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+  /* Botones de filtro */
+  .filter-btn {
+    cursor: pointer; /* Cursor interactivo */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Transición para hover */
+    white-space: nowrap; /* Prevenir salto de línea */
+  }
+
+  .filter-btn:hover {
+    background-color: #ef4444; /* Fondo al pasar el cursor */
+    color: white; /* Texto blanco */
+  }
+
+  .filter-btn.active {
+    background-color: #dc2626; /* Fondo para botón activo */
+    color: white; /* Texto blanco */
+  }
+
+  /* Responsividad para pantallas pequeñas */
+  @media (max-width: 640px) {
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .project {
+    min-height: 300px;
+    max-height: 320px;
+  }
+}
+  
+
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-roboto">
+  <!-- Header -->
+  <header class="py-4 bg-red-600 text-white shadow fixed top-0 left-0 w-full z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#hero" class="text-3xl font-merriweather hover:text-gray-300">Inicio</a>
+      <nav class="hidden lg:flex space-x-6">
+        <a href="#about" class="hover:text-gray-300">Sobre mí</a>
+        <a href="#portfolio" class="hover:text-gray-300">Proyectos</a>
+        <a href="#featured-projects" class="hover:text-gray-300">Destacados</a>
+        <a href="#contact" class="hover:text-gray-300">Contacto</a>
+      </nav>
+      <button id="menu-toggle" class="lg:hidden text-white focus:outline-none">☰</button>
+    </div>
+    <div id="mobile-menu" class="hidden hamburger-menu lg:hidden flex-col items-center space-y-4 bg-red-500 text-white">
+      <a href="#about" class="block py-2 px-4 hover:text-gray-300">Sobre mí</a>
+      <a href="#portfolio" class="block py-2 px-4 hover:text-gray-300">Proyectos</a>
+      <a href="#featured-projects" class="block py-2 px-4 hover:text-gray-300">Destacados</a>
+      <a href="#contact" class="block py-2 px-4 hover:text-gray-300">Contacto</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative h-screen flex items-center justify-center text-center bg-gradient-to-b from-gray-200 to-white mt-16">
+    <div id="particles-js"></div>
+    <div class="hero-content">
+      <h2 class="text-5xl font-merriweather text-gray-800">
+        <span id="typed-text"></span>
+      </h2>
+      <p class="mt-4 text-lg text-gray-600">Descubre mis proyectos y logros en el desarrollo de videojuegos.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-merriweather text-red-600 mb-6" data-aos="fade-right">Sobre mí</h2>
+      <div class="flex flex-col md:flex-row items-center">
+        <img src="myself.jpg" alt="Mi foto" class="w-48 h-48 rounded-full mx-auto md:mx-0 md:mr-8" data-aos="fade-right">
+        <p class="text-lg text-gray-600 mt-4 md:mt-0" data-aos="fade-left">
+          Soy un desarrollador apasionado por los videojuegos. Me especializo en crear experiencias inmersivas y dinámicas utilizando herramientas como Unity y Unreal Engine. Mi meta es llevar cada proyecto al siguiente nivel.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-merriweather text-red-600 mb-6">Mis Proyectos</h2>
+      <div class="flex justify-center space-x-4 mb-8">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="unity">Unity</button>
+        <button class="filter-btn" data-filter="unreal">Unreal</button>
+        <button class="filter-btn" data-filter="graphics">Programación Gráfica</button>
+        <button class="filter-btn" data-filter="other">Otros</button>
+      </div>
+      <div class="projects-container">
+        <div class="project unity">
+          <img src="Unity_2021.svg.png" alt="Unity Project">
+          <h3>Proyecto Unity 1</h3>
+          <p>Descripción breve del proyecto.</p>
+          <button>Más Detalles</button>
         </div>
-        <footer class="no_landing">
-            <div>
-                Web acadÉmica hecha por <a href="./cv/index.html" target="_blank">Carlos Garcia </a>
-            </div>
-            <div>
-                <a href="#" onclick="showPrivacy()">Politica privacidad</a>
-            </div>
-            <div>
-                <a href="#contacto">Contacto</a>
-            </div>
-            <div>
-                <a href="https://www.linkedin.com/in/carlos-garc%C3%ADa-roig-8a1536192/" target="_blank"><img src="./images/linkedin.png" alt="linkedin_logo"></a>
-                <a href="https://twitter.com/SpiderMan" target="_blank"><img src="./images/twitter.png" alt="twitter_logo"></a>
-                <a href="https://www.youtube.com/channel/UChGyVH970KcYHYltQmR-JnA" target="_blank"><img src="./images/youtube.png" alt="youtube_logo"></a>
-            </div>
-        </footer>
-        <div class="overlay" id="overlay">
-            <div class="popup" id="popup">
-                <span class="close " onclick="closePrivacy()">X</span>
-                <p><strong>POLÍTICA DE PRIVACIDAD</strong></p><p>El presente PolÍtica de Privacidad establece los tÉrminos en que Carlos GarcÍa usa y protege la informaciÓn que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañÍa estÁ comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de informaciÓn personal con la cual usted pueda ser identificado, lo hacemos asegurando que sÓlo se emplearÁ de acuerdo con los tÉrminos de este documento. Sin embargo esta PolÍtica de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta pÁgina para asegurarse que estÁ de acuerdo con dichos cambios.</p><p><strong>InformaciÓn que es recogida</strong></p><p>Nuestro sitio web podrÁ recoger informaciÓn personal por ejemplo: Nombre,&nbsp; informaciÓn de contacto como&nbsp; su direcciÓn de correo electrÓnica e informaciÓn demogrÁfica. AsÍ mismo cuando sea necesario podrÁ ser requerida informaciÓn especÍfica para procesar algÚn pedido o realizar una entrega o facturaciÓn.</p><p><strong>Uso de la informaciÓn recogida</strong></p><p>Nuestro sitio web emplea la informaciÓn con el fin de proporcionar el mejor servicio posible, particularmente para mantener un registro de usuarios, de pedidos en caso que aplique, y mejorar nuestros productos y servicios. &nbsp;Es posible que sean enviados correos electrÓnicos periÓdicamente a travÉs de nuestro sitio con ofertas especiales, nuevos productos y otra informaciÓn publicitaria que consideremos relevante para usted o que pueda brindarle algÚn beneficio, estos correos electrÓnicos serÁn enviados a la direcciÓn que usted proporcione y podrÁn ser cancelados en cualquier momento.</p><p>Carlos GarcÍa estÁ altamente comprometido para cumplir con el compromiso de mantener su informaciÓn segura. Usamos los sistemas mÁs avanzados y los actualizamos constantemente para asegurarnos que no exista ningÚn acceso no autorizado.</p><a href="https://noticiasatleticodemadrid.es/" target="_blank">noticias</a>. Usted puede aceptar o negar el uso de cookies, sin embargo la mayorÍa de navegadores aceptan cookies automÁticamente pues sirve para tener un mejor servicio web. TambiÉn usted puede cambiar la configuraciÓn de su ordenador para declinar las cookies. Si se declinan es posible que no pueda utilizar algunos de nuestros servicios.</p><p><strong>Enlaces a Terceros</strong></p><p>Este sitio web pudiera contener en laces a otros sitios que pudieran ser de su interÉs. Una vez que usted de clic en estos enlaces y abandone nuestra pÁgina, ya no tenemos control sobre al sitio al que es redirigido y por lo tanto no somos responsables de los <a href="https://plantillaterminosycondicionestiendaonline.com/" target="_blank">tÉrminos o privacidad</a> ni de la protecciÓn de sus datos en esos otros sitios terceros. Dichos sitios estÁn sujetos a sus propias polÍticas de privacidad por lo cual es recomendable que los consulte para confirmar que usted estÁ de acuerdo con estas.</p><p><strong>Control de su informaciÓn personal</strong></p><p>En cualquier momento usted puede restringir la recopilaciÓn o el uso de la informaciÓn personal que es proporcionada a nuestro sitio web.&nbsp; Cada vez que se le solicite rellenar un formulario, como el de alta de usuario, puede marcar o desmarcar la opciÓn de recibir informaciÓn por correo electrÓnico. &nbsp;En caso de que haya marcado la opciÓn de recibir nuestro boletÍn o publicidad usted puede cancelarla en cualquier momento.</p><p>Esta compañÍa no venderÁ, cederÁ ni distribuirÁ la informaciÓn personal que es recopilada sin su consentimiento, salvo que sea requerido por un juez con un orden judicial.</p><p>Carlos GarcÍa Se reserva el derecho de cambiar los tÉrminos de la presente PolÍtica de Privacidad en cualquier momento.</p><p>Esta politica de privacidad se han generado en <a href="https://politicadeprivacidadplantilla.com/" target="_blank">politicadeprivacidadplantilla.com</a>.<br></p>
-                <br>
-                <a href="#" onclick="closePrivacy()" style="margin: auto;">Cerrar </a>
-            </div>
+        <div class="project unity">
+          <img src="Unity_2021.svg.png" alt="Unity Project">
+          <h3>Proyecto Unity 1</h3>
+          <p>Descripción breve del proyecto.</p>
+          <button>Más Detalles</button>
         </div>
-        <script src="scripts/spiderman_scripts.js"></script>
-        <script src="scripts/slideshow.js"></script>
-        <script src="scripts/addMargin.js"></script>
-    </body>
+        <div class="project other">
+          <img src="programming.png" alt="Programming Project">
+          <h3>Proyecto Otro 1</h3>
+          <p>Descripción breve del proyecto.</p>
+          <button>Más Detalles</button>
+        </div>
+        <div class="project unity">
+          <img src="Unity_2021.svg.png" alt="Unity Project">
+          <h3>Proyecto Unity 1</h3>
+          <p>Descripción breve del proyecto.</p>
+          <button>Más Detalles</button>
+        </div>
+        <div class="project unreal">
+          <img src="Unreal_Engine_Logo.svg.png" alt="Unreal Project">
+          <h3>Proyecto Unreal 1</h3>
+          <p>Descripción breve del proyecto.</p>
+          <button>Más Detalles</button>
+        </div>
+        <div class="project graphics">
+          <img src="Vulkan_logo.svg.png" alt="Graphics Project">
+          <h3>Proyecto Gráfico 1</h3>
+          <p>Descripción breve del proyecto.</p>
+          <button>Más Detalles</button>
+        </div>
+        <div class="project graphics">
+          <img src="Vulkan_logo.svg.png" alt="Graphics Project">
+          <h3>Proyecto Gráfico 1</h3>
+          <p>Descripción breve del proyecto.</p>
+          <button>Más Detalles</button>
+        </div>
+        <div class="project unity">
+          <img src="Unity_2021.svg.png" alt="Unity Project">
+          <h3>Proyecto Unity 1</h3>
+          <p>Descripción breve del proyecto.</p>
+          <button>Más Detalles</button>
+        </div>
+        <div class="project other">
+          <img src="programming.png" alt="Programming Project">
+          <h3>Proyecto Otro 1</h3>
+          <p>Descripción breve del proyecto.</p>
+          <button>Más Detalles</button>
+        </div>
+        <div class="project graphics">
+          <img src="Vulkan_logo.svg.png" alt="Graphics Project">
+          <h3>Proyecto Gráfico 1</h3>
+          <p>Descripción breve del proyecto.</p>
+          <button>Más Detalles</button>
+        </div>
+        <!-- Más proyectos -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer id="contact" class="py-8 bg-red-600 text-white">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-xl font-merriweather">Contáctame</h3>
+      <p class="text-gray-300 mt-2">Puedes encontrarme en las siguientes plataformas:</p>
+      <div class="flex justify-center space-x-6 mt-4">
+        <a href="https://github.com/tu-perfil" target="_blank" class="hover:text-gray-300">
+          <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="w-6 h-6">
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" class="hover:text-gray-300">
+          <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/61/61109.png" alt="LinkedIn" class="w-6 h-6">
+          </div>
+        </a>
+        <a href="https://www.youtube.com/channel/tu-canal" target="_blank" class="hover:text-gray-300">
+          <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" class="w-6 h-6">
+          </div>
+        </a>
+      </div>
+      <p class="text-gray-300 mt-6">
+        O envíame un correo a: 
+        <a href="mailto:tu-correo@ejemplo.com" class="underline hover:text-gray-300">
+          tu-correo@ejemplo.com
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const typed = new Typed('#typed-text', {
+      strings: ['¡Bienvenido a mi Portfolio!', 'Descubre mis Proyectos.', 'Desarrollador de Videojuegos.'],
+      typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 2000,
+      loop: true,
+    });
+
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 50, density: { enable: true, value_area: 800 } },
+        color: { value: '#ffffff' },
+        shape: { type: 'circle' },
+        opacity: { value: 0.5 },
+        size: { value: 5 },
+        move: { enable: true, speed: 3 },
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: {
+          onhover: { enable: true, mode: 'repulse' },
+          onclick: { enable: true, mode: 'push' },
+        },
+        modes: {
+          repulse: { distance: 100 },
+          push: { particles_nb: 4 },
+        },
+      },
+    });
+
+    function toggleProject(projectElement) {
+      document.querySelectorAll('.project').forEach(proj => proj.classList.remove('expanded'));
+      projectElement.classList.add('expanded');
+
+      document.querySelectorAll('.project-info').forEach(info => {
+        if (info !== projectElement.querySelector('.project-info')) {
+          info.classList.add('hidden');
+        }
+      });
+
+      const info = projectElement.querySelector('.project-info');
+      info.classList.toggle('hidden');
+    }
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Filtering functionality
+    const projectsContainer = document.querySelector('.projects-container');
+    const projects = document.querySelectorAll('.project');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Eliminar la clase activa de todos los botones
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Agregar la clase activa al botón actual
+        button.classList.add('active');
+
+        // Obtener el filtro seleccionado
+        const filter = button.getAttribute('data-filter');
+
+        // Mostrar/Ocultar proyectos
+        projects.forEach(project => {
+          if (filter === 'all' || project.classList.contains(filter)) {
+            project.classList.remove('hidden'); // Mostrar proyecto
+          } else {
+            project.classList.add('hidden'); // Ocultar proyecto
+          }
+        });
+
+        // Ajustar la altura del contenedor al contenido visible
+        setTimeout(() => {
+          const visibleProjects = Array.from(projects).filter(
+            project => !project.classList.contains('hidden')
+          );
+          const newHeight = visibleProjects.length
+            ? visibleProjects[0].offsetHeight * Math.ceil(visibleProjects.length / getComputedStyle(projectsContainer).gridTemplateColumns.split(' ').length)
+            : 0;
+          projectsContainer.style.height = `${newHeight}px`;
+        }, 50); // Retraso para asegurar que los proyectos visibles están calculados
+      });
+    });
+  </script>
+</body>
 </html>
