@@ -64,6 +64,7 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+  
 }
 
 a {
@@ -593,7 +594,7 @@ h6 {
 }
 
 .page-title .heading {
-  padding: 160px 0 80px 0;
+  padding: 50px 0 50px 0;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
@@ -1211,6 +1212,7 @@ section,
   margin: 0 auto 20px auto;
   list-style: none;
   text-align: center;
+  
 }
 
 .portfolio .portfolio-filters li {
