@@ -1481,3 +1481,19 @@ section,
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
+
+
+/* Contenedor del video */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Ajusta este valor según el tamaño máximo que desees */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+/* Iframe del video */
+.video-container iframe {
+  width: 100%; /* Ocupa el 100% del ancho del contenedor */
+  height: auto; /* Altura automática para mantener la proporción */
+  aspect-ratio: 16 / 9; /* Mantiene la proporción 16:9 del video */
+}
