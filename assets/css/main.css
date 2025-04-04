@@ -143,45 +143,49 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
-.header {
-  --background-color: rgba(0, 0, 0, 0);
-  color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 15px 0;
-  transition: all 0.5s;
-  z-index: 997;
+
+.header .navmenu a,
+.header .navmenu a:focus {
+  color: #000000; /* Negro */
+  font-weight: 500; /* Un poco más de peso para mejorar la legibilidad */
 }
 
-.header .logo {
-  line-height: 1;
+/* Color de texto para los enlaces activos o al pasar el cursor cuando el fondo es claro */
+.header .navmenu a:hover,
+.header .navmenu li:hover > a,
+.header .navmenu .active,
+.header .navmenu .active:focus {
+  color: var(--accent-color); /* Mantener el color de acento (rojo) */
 }
 
-.header .logo img {
-  max-height: 32px;
-  margin-right: 8px;
+/* Cuando se hace scroll, cambiar el color del texto a blanco */
+.scrolled .header .navmenu a,
+.scrolled .header .navmenu a:focus {
+  color: #ffffff; /* Blanco */
 }
 
-.header .logo h1 {
-  font-size: 30px;
-  margin: 0;
-  font-weight: 700;
-  color: var(--heading-color);
+/* Color de texto para los enlaces activos o al pasar el cursor cuando el fondo es oscuro (scroll) */
+.scrolled .header .navmenu a:hover,
+.scrolled .header .navmenu li:hover > a,
+.scrolled .header .navmenu .active,
+.scrolled .header .navmenu .active:focus {
+  color: var(--accent-color); /* Mantener el color de acento (rojo) */
 }
 
-.scrolled .header {
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+/* Ajuste para el indicador bajo el enlace activo */
+.navmenu > ul > li > a:before {
+  background-color: var(--accent-color); /* Asegurar que la línea inferior sea del color de acento */
 }
 
-/* Global Header on Scroll
-------------------------------*/
-.scrolled .header {
-  --background-color: rgba(0, 0, 0, 0.8);
-  
+/* Ajuste para el ícono de menú móvil */
+.header .mobile-nav-toggle {
+  color: #000000; /* Negro para estado inicial */
 }
 
-.scrolled .header h1{
-  color: white;
+.scrolled .header .mobile-nav-toggle {
+  color: #ffffff; /* Blanco cuando se hace scroll */
 }
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -447,63 +451,201 @@ h6 {
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
+
+/* Estilos actualizados para el footer */
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-size: 14px;
-  text-align: center;
-  padding: 30px 0;
+  padding: 60px 0 0 0;
   position: relative;
+  color: #fff;
 }
 
 .footer h3 {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer h4 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
   position: relative;
-  padding: 0;
-  margin: 0 0 15px 0;
+}
+
+.footer h4:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #ff4d5a;
 }
 
 .footer p {
-  font-size: 15;
-  font-style: italic;
-  padding: 0;
-  margin: 0 0 30px 0;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.footer-info .text-accent {
+  color: #ff4d5a;
+}
+
+.footer-info a {
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.footer-info a:hover {
+  color: #ff4d5a;
+  text-decoration: none;
+}
+
+.footer-contact p {
+  margin-bottom: 20px;
 }
 
 .footer .social-links {
-  margin: 0 0 30px 0;
+  margin: 0 0 25px 0;
 }
 
 .footer .social-links a {
-  font-size: 16px;
+  font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--accent-color);
-  color: var(--contrast-color);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
   line-height: 1;
-  margin: 0 4px;
+  margin-right: 15px;
   border-radius: 50%;
   text-align: center;
-  width: 36px;
-  height: 36px;
+  width: 45px;
+  height: 45px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: #ff4d5a;
   text-decoration: none;
+  transform: translateY(-5px);
 }
 
-.footer .copyright {
-  padding-top: 25px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+.footer .btn-primary {
+  background-color: #d21818;
+  border-color: #d21818;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-.footer .credits {
-  font-size: 13px;
-  padding-top: 5px;
+.footer .btn-primary:hover {
+  background-color: #ff4d5a;
+  border-color: #ff4d5a;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.footer-bottom {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px 0;
+  margin-top: 60px;
+}
+
+.footer-bottom .copyright {
+  font-size: 14px;
+}
+
+.footer-bottom .tech-stack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.footer-bottom .tech-stack span {
+  margin-right: 10px;
+}
+
+.footer-bottom .tech-stack i {
+  font-size: 18px;
+  margin: 0 5px;
+  color: #fff;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.footer-bottom .tech-stack i:hover {
+  opacity: 1;
+  color: #ff4d5a;
+}
+
+
+/* Estilos para asegurar que el footer tenga un fondo oscuro */
+.footer.dark-background {
+  --background-color: rgba(15, 15, 15, 0.975); /* Fondo muy oscuro, casi negro */
+  background-color: var(--background-color);
+  color: #ffffff;
+}
+
+.footer.dark-background h3,
+.footer.dark-background h4 {
+  color: #ffffff;
+}
+
+.footer.dark-background p {
+  color: #f0f0f0;
+}
+
+/* Asegurar que el botón de CV tenga el color correcto */
+.footer.dark-background .btn-primary {
+  background-color: #d21818;
+  border-color: #d21818;
+}
+
+/* Asegurar que el footer-bottom también sea oscuro */
+.footer.dark-background .footer-bottom {
+  background-color: rgba(0, 0, 0, 0.4); /* Más oscuro que el fondo principal */
+}
+
+/* Texto del copyright */
+.footer.dark-background .copyright {
+  color: #cccccc;
+}
+
+/* Íconos de tecnologías */
+.footer.dark-background .tech-stack {
+  color: #cccccc;
+}
+
+.footer.dark-background .tech-stack i {
+  color: #ffffff;
+}
+
+/* Responsive para el footer */
+@media (max-width: 991px) {
+  .footer-info, .footer-contact {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    text-align: center;
+  }
+  
+  .footer h4:after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .footer .social-links {
+    justify-content: center;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -839,169 +981,6 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Skills Section
---------------------------------------------------------------*/
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
-}
-
-.skills .progress .skill {
-  color: var(--heading-color);
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: var(--heading-font);
-}
-
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
-}
-
-.skills .progress-bar-wrap {
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
-  height: 10px;
-}
-
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Interests Section
---------------------------------------------------------------*/
-.interests .features-item {
-  background-color: var(--surface-color);
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  transition: 0.3s;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  position: relative;
-}
-
-.interests .features-item i {
-  font-size: 32px;
-  padding-right: 10px;
-  line-height: 0;
-}
-
-.interests .features-item h3 {
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-size: 16px;
-}
-
-.interests .features-item h3 a {
-  color: var(--heading-color);
-  transition: 0.3s;
-}
-
-.interests .features-item:hover {
-  border-color: var(--accent-color);
-}
-
-.interests .features-item:hover h3 a {
-  color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Testimonials Section
---------------------------------------------------------------*/
-.testimonials .testimonials-carousel,
-.testimonials .testimonials-slider {
-  overflow: hidden;
-}
-
-.testimonials .testimonial-item {
-  box-sizing: content-box;
-  min-height: 320px;
-}
-
-.testimonials .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 50%;
-  margin: -40px 0 0 40px;
-  position: relative;
-  z-index: 2;
-  border: 6px solid var(--background-color);
-}
-
-.testimonials .testimonial-item h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px 0 5px 45px;
-}
-
-.testimonials .testimonial-item h4 {
-  font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin: 0 0 0 45px;
-}
-
-.testimonials .testimonial-item .quote-icon-left,
-.testimonials .testimonial-item .quote-icon-right {
-  color: color-mix(in srgb, var(--accent-color), transparent 50%);
-  font-size: 26px;
-  line-height: 0;
-}
-
-.testimonials .testimonial-item .quote-icon-left {
-  display: inline-block;
-  left: -5px;
-  position: relative;
-}
-
-.testimonials .testimonial-item .quote-icon-right {
-  display: inline-block;
-  right: -5px;
-  position: relative;
-  top: 10px;
-  transform: scale(-1, -1);
-}
-
-.testimonials .testimonial-item p {
-  font-style: italic;
-  margin: 0 15px 0 15px;
-  padding: 20px 20px 60px 20px;
-  background: var(--surface-color);
-  border-radius: 6px;
-  position: relative;
-  z-index: 1;
-}
-
-.testimonials .swiper-wrapper {
-  height: auto;
-}
-
-.testimonials .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: var(--background-color);
-  opacity: 1;
-  border: 1px solid var(--accent-color);
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
 .resume .resume-title {
@@ -1204,180 +1183,6 @@ section,
   color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Portfolio Section
---------------------------------------------------------------*/
-.portfolio .portfolio-filters {
-  padding: 0;
-  margin: 0 auto 20px auto;
-  list-style: none;
-  text-align: center;
-  
-}
-
-.portfolio .portfolio-filters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 0;
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0 10px;
-  line-height: 1;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-.portfolio .portfolio-filters li:hover,
-.portfolio .portfolio-filters li.filter-active {
-  color: var(--accent-color);
-}
-
-.portfolio .portfolio-filters li:first-child {
-  margin-left: 0;
-}
-
-.portfolio .portfolio-filters li:last-child {
-  margin-right: 0;
-}
-
-@media (max-width: 575px) {
-  .portfolio .portfolio-filters li {
-    font-size: 14px;
-    margin: 0 5px;
-  }
-}
-
-.portfolio .portfolio-content {
-  position: relative;
-  overflow: hidden;
-}
-
-.portfolio .portfolio-content img {
-  transition: 0.3s;
-}
-
-.portfolio .portfolio-content .portfolio-info {
-  opacity: 0;
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  transition: all ease-in-out 0.3s;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 15px;
-}
-
-.portfolio .portfolio-content .portfolio-info h4 {
-  font-size: 14px;
-  padding: 5px 10px;
-  font-weight: 400;
-  color: #ffffff;
-  display: inline-block;
-  background-color: var(--accent-color);
-}
-
-.portfolio .portfolio-content .portfolio-info p {
-  position: absolute;
-  bottom: 10px;
-  text-align: center;
-  display: inline-block;
-  left: 0;
-  right: 0;
-  font-size: 16px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.portfolio .portfolio-content .portfolio-info .preview-link,
-.portfolio .portfolio-content .portfolio-info .details-link {
-  position: absolute;
-  left: calc(50% - 40px);
-  font-size: 26px;
-  top: calc(50% - 14px);
-  color: #fff;
-  transition: 0.3s;
-  line-height: 1.2;
-}
-
-.portfolio .portfolio-content .portfolio-info .preview-link:hover,
-.portfolio .portfolio-content .portfolio-info .details-link:hover {
-  color: var(--accent-color);
-}
-
-.portfolio .portfolio-content .portfolio-info .details-link {
-  left: 50%;
-  font-size: 34px;
-  line-height: 0;
-}
-
-.portfolio .portfolio-content:hover .portfolio-info {
-  opacity: 1;
-}
-
-.portfolio .portfolio-content:hover img {
-  transform: scale(1.1);
-}
-
-/*--------------------------------------------------------------
-# Portfolio Details Section
---------------------------------------------------------------*/
-.portfolio-details .portfolio-details-slider img {
-  width: 100%;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
-  opacity: 1;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
-}
-
-.portfolio-details .portfolio-info {
-  background-color: var(--surface-color);
-  padding: 30px;
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
-}
-
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-}
-
-.portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.portfolio-details .portfolio-info ul li+li {
-  margin-top: 10px;
-}
-
-.portfolio-details .portfolio-description {
-  padding-top: 30px;
-}
-
-.portfolio-details .portfolio-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.portfolio-details .portfolio-description p {
-  padding: 0;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
 
 /*--------------------------------------------------------------
 # Starter Section Section
@@ -1497,3 +1302,312 @@ section,
   height: auto; /* Altura automática para mantener la proporción */
   aspect-ratio: 16 / 9; /* Mantiene la proporción 16:9 del video */
 }
+
+
+/* Estilos para el Hero Section con animación - Añade esto a tu main.css */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  margin-top: -60px;
+  overflow: hidden;
+  z-index: 1;
+  /* Cambiamos el fondo a tonos rojizos claros */
+  background: linear-gradient(135deg, #f9e6e6 0%, #f8d7d7 50%, #f5c4c4 100%);
+}
+
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Cambiamos el color del texto para que contraste bien con el fondo claro */
+.hero-section h1 {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 4rem;
+  font-weight: 800;
+  /* Cambiamos el gradiente a uno más oscuro para contrastar con el fondo claro */
+  background: linear-gradient(to right, #d21818, #8c0f0f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.hero-section h2 {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  /* Cambiamos a un color más oscuro para mejor contraste */
+  color: #333333;
+}
+
+.hero-section .lead {
+  color: #333333;
+}
+
+.hero-section .highlight {
+  color: #d21818;
+  font-weight: 600;
+  border-bottom: 2px solid #d21818;
+  padding-bottom: 2px;
+}
+
+.hero-buttons {
+  margin-top: 2rem;
+}
+
+.btn-primary {
+  background-color: #d21818;
+  border-color: #d21818;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(210, 24, 24, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: #ff4d5a;
+  border-color: #ff4d5a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(210, 24, 24, 0.4);
+}
+
+/* Cambiamos también el estilo del botón outline para que se vea bien sobre fondo claro */
+.btn-outline-light {
+  color: #d21818;
+  border-color: #d21818;
+  border-width: 2px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(210, 24, 24, 0.2);
+  background-color: rgba(210, 24, 24, 0.1);
+  color: #d21818;
+}
+
+
+
+/* Estilos para el botón de CV - Añade esto a tu main.css */
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+}
+
+/* Pequeños ajustes para los botones en pantallas más pequeñas */
+@media (max-width: 576px) {
+  .hero-buttons .btn {
+    margin-bottom: 10px;
+  }
+}
+
+
+
+.portfolio-card {
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* El contenedor de la imagen y la información */
+.portfolio-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* Contenedor de la imagen para mantener la proporción */
+.portfolio-image-container {
+  width: 100%;
+  height: 280px; /* Altura fija para todas las imágenes */
+  overflow: hidden;
+}
+
+/* Estilos para las imágenes dentro de las tarjetas */
+.portfolio-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-content:hover .portfolio-image-container img {
+  transform: scale(1.05);
+}
+
+/* Estilos para la información que aparece al pasar el mouse */
+.portfolio-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(210, 24, 24, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.portfolio-content:hover .portfolio-info {
+  opacity: 1;
+}
+
+.portfolio-info-content {
+  padding: 20px;
+  text-align: center;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s ease 0.1s;
+}
+
+.portfolio-content:hover .portfolio-info-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Estilos para el título y la descripción */
+.portfolio-info h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.portfolio-info p {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Estilos para los enlaces dentro de la tarjeta */
+.portfolio-links {
+  margin-bottom: 15px;
+}
+
+.portfolio-links a {
+  color: #ffffff;
+  margin: 0 8px;
+  font-size: 24px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.portfolio-links a:hover {
+  color: #f8f9fa;
+  transform: scale(1.2);
+}
+
+/* Estilos para las etiquetas de tecnología */
+.portfolio-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.portfolio-tags .tag {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Estilos responsive para dispositivos móviles */
+@media (max-width: 767px) {
+  .portfolio-image-container {
+    height: 220px; /* Altura ligeramente menor para móviles */
+  }
+}
+
+
+.portfolio-filters {
+  margin-bottom: 30px !important;
+  padding: 0;
+  margin: 0 auto 20px auto;
+  list-style: none;
+  text-align: center;
+}
+
+.portfolio-filters li {
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 14px !important;
+  margin: 0 5px 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.portfolio-filters li:hover,
+.portfolio-filters li.filter-active {
+  background-color: #d21818;
+  color: white !important;
+}
+
+.portfolio-filters li:first-child {
+  margin-left: 0;
+}
+
+.portfolio-filters li:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 575px) {
+  .portfolio-filters li {
+    font-size: 13px !important;
+    padding: 6px 12px;
+    margin: 0 3px 8px;
+  }
+}
+
+
+
+

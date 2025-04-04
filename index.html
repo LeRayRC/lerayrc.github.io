@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio - Personal Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Carlos García - Game Development Portfolio</title>
+  <meta name="description" content="Portfolio of Carlos García, game developer specialized in Unity, Unreal Engine and graphics programming">
+  <meta name="keywords" content="game development, unity, unreal engine, graphics programming, opengl, portfolio">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.ico" rel="icon">
@@ -26,14 +26,6 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Personal
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Updated: Nov 04 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="portfolio-page">
@@ -44,154 +36,232 @@
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-brilliance" viewBox="0 0 16 16">
-          <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M1 8a7 7 0 0 0 7 7 3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 1 0-7 7 7 0 0 0-7 7"/>
-        </svg> -->
         <h1 class="sitename">Portfolio</h1>
-        <!-- <h1 class="sitename">Portfolio</h1> -->
       </a>
 
-      <!-- <nav id="navmenu" class="navmenu">
+      <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#footer">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav> -->
+      </nav>
 
     </div>
   </header>
 
   <main class="main">
 
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Hi! I'm Carlos Garcia. </h1>
-              <h2>Welcome to my portfolio</h2>
+    <div class="hero-section" data-aos="fade">
+      <div id="particles-bg" class="particles-container"></div>
+      <div class="container">
+        <div class="row d-flex justify-content-center text-center">
+          <div class="col-lg-10">
+            <h1 class="display-3 fw-bold mb-3">Carlos García</h1>
+            <h2 class="mb-4">Game Developer & Graphics Programmer</h2>
+            <div class="hero-buttons">
+              <a href="#portfolio" class="btn btn-primary btn-lg me-2">View Projects</a>
+              <a href="https://drive.google.com/file/d/YOUR_CV_FILE_ID/view" target="_blank" class="btn btn-success btn-lg me-2">
+                <i class="bi bi-file-earmark-pdf me-1"></i> Download CV
+              </a>
+              <a href="https://github.com/LeRayRC" class="btn btn-outline-light btn-lg">GitHub</a>
             </div>
           </div>
         </div>
       </div>
-      <!-- <nav class="breadcrumbs">
-        <div class="container">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Portfolio</li>
-          </ol>
-        </div>
-      </nav> -->
-    </div><!-- End Page Title -->
+    </div>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
+    <!-- Portfolio Section Corrected -->
+<section id="portfolio" class="portfolio section">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Works</h2>
+      <div>My Portfolio</div>
+    </div>
 
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-unity">Unity</li>
-            <li data-filter=".filter-unreal">Unreal</li>
-            <li data-filter=".filter-gp">Graphic Programming</li>
-            <li data-filter=".filter-others">Others</li>
-          </ul><!-- End Portfolio Filters -->
-          
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-          
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-others">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/asteroids/game.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+      <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+        <li data-filter="*" class="filter-active">All</li>
+        <li data-filter=".filter-unity">Unity</li>
+        <li data-filter=".filter-unreal">Unreal</li>
+        <li data-filter=".filter-gp">Graphics Programming</li>
+        <li data-filter=".filter-others">Others</li>
+      </ul><!-- End Portfolio Filters -->
+      
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+      
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-others">
+          <div class="portfolio-card">
+            <div class="portfolio-content">
+              <div class="portfolio-image-container">
+                <img src="assets/img/portfolio/asteroids/game.png" alt="Asteroids">
+              </div>
+              <div class="portfolio-info">
+                <div class="portfolio-info-content">
                   <h4>Asteroids</h4>
                   <p>First year final academic project</p>
-                  <a href="assets/img/portfolio/asteroids.png" title="" data-gallery="asteroids" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details-asteroids.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <div class="portfolio-links">
+                    <a href="assets/img/portfolio/asteroids/game.png" title="Asteroids" data-gallery="asteroids" class="glightbox preview-link"><i class="bi bi-eye"></i></a>
+                    <a href="portfolio-details-asteroids.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  </div>
+                  <div class="portfolio-tags">
+                    <span class="tag">C++</span>
+                    <span class="tag">ESAT</span>
+                  </div>
                 </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gp">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/demo-reel/entities_manager.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gp">
+          <div class="portfolio-card">
+            <div class="portfolio-content">
+              <div class="portfolio-image-container">
+                <img src="assets/img/portfolio/demo-reel/entities_manager.png" alt="OpenGL Demo reel">
+              </div>
+              <div class="portfolio-info">
+                <div class="portfolio-info-content">
                   <h4>OpenGL Demo reel</h4>
-                  <p>Graphic programming subject final project</p>
-                  <a href="assets/img/portfolio/demo-reel/entities_manager.png" title="" data-gallery="demo-reel" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details-demo-reel.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <p>Graphics programming final project</p>
+                  <div class="portfolio-links">
+                    <a href="assets/img/portfolio/demo-reel/entities_manager.png" title="OpenGL Demo" data-gallery="demo-reel" class="glightbox preview-link"><i class="bi bi-eye"></i></a>
+                    <a href="portfolio-details-demo-reel.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  </div>
+                  <div class="portfolio-tags">
+                    <span class="tag">OpenGL</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">GLSL</span>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-unity">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/water-time/game_2.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Water Time</h4>
-                  <p>VR Academic project</p>
-                  <a href="assets/img/portfolio/water-time/game_2.png" title="" data-gallery="water-time" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details-water-time.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-unity">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/amousing/tutorial.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Amousing</h4>
-                  <p>Unity project using only mouse buttons</p>
-                  <a href="assets/img/portfolio/amousing/tutorial.png" title="" data-gallery="amousing" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details-amousing.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-unreal">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/rainbow-lab/game3.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Rainbow Lab</h4>
-                  <p>First academic Unreal project</p>
-                  <a href="assets/img/portfolio/rainbow-lab/game3.png" title="" data-gallery="rainbow-lab" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details-rainbow-lab.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-          </div><!-- End Portfolio Container -->
-
+          </div>
         </div>
 
-      </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-unity">
+          <div class="portfolio-card">
+            <div class="portfolio-content">
+              <div class="portfolio-image-container">
+                <img src="assets/img/portfolio/water-time/game_2.png" alt="Water Time">
+              </div>
+              <div class="portfolio-info">
+                <div class="portfolio-info-content">
+                  <h4>Water Time</h4>
+                  <p>VR Academic project in Unity</p>
+                  <div class="portfolio-links">
+                    <a href="assets/img/portfolio/water-time/game_2.png" title="Water Time" data-gallery="water-time" class="glightbox preview-link"><i class="bi bi-eye"></i></a>
+                    <a href="portfolio-details-water-time.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  </div>
+                  <div class="portfolio-tags">
+                    <span class="tag">Unity</span>
+                    <span class="tag">VR</span>
+                    <span class="tag">C#</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    </section><!-- /Portfolio Section -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-unity">
+          <div class="portfolio-card">
+            <div class="portfolio-content">
+              <div class="portfolio-image-container">
+                <img src="assets/img/portfolio/amousing/tutorial.png" alt="Amousing">
+              </div>
+              <div class="portfolio-info">
+                <div class="portfolio-info-content">
+                  <h4>Amousing</h4>
+                  <p>Unity project using only mouse buttons</p>
+                  <div class="portfolio-links">
+                    <a href="assets/img/portfolio/amousing/tutorial.png" title="Amousing" data-gallery="amousing" class="glightbox preview-link"><i class="bi bi-eye"></i></a>
+                    <a href="portfolio-details-amousing.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  </div>
+                  <div class="portfolio-tags">
+                    <span class="tag">Unity</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">Design</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-unreal">
+          <div class="portfolio-card">
+            <div class="portfolio-content">
+              <div class="portfolio-image-container">
+                <img src="assets/img/portfolio/rainbow-lab/game3.png" alt="Rainbow Lab">
+              </div>
+              <div class="portfolio-info">
+                <div class="portfolio-info-content">
+                  <h4>Rainbow Lab</h4>
+                  <p>First academic Unreal project</p>
+                  <div class="portfolio-links">
+                    <a href="assets/img/portfolio/rainbow-lab/game3.png" title="Rainbow Lab" data-gallery="rainbow-lab" class="glightbox preview-link"><i class="bi bi-eye"></i></a>
+                    <a href="portfolio-details-rainbow-lab.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  </div>
+                  <div class="portfolio-tags">
+                    <span class="tag">Unreal</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">Materials</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- End Portfolio Container -->
+    </div>
+  </div>
+</section><!-- /Portfolio Section -->
+
 
   </main>
 
+  <!-- Footer -->
   <footer id="footer" class="footer dark-background">
     <div class="container">
-      <h3 class="sitename">Contact</h3>
-      <p>You can find me in my social networks</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://github.com/LeRayRC"><i class="bi bi-github"></i></a>
-        <a href="www.linkedin.com/in/carlos-garcía-roig-8a1536192"><i class="bi bi-linkedin"></i></a>
-        <a href="https://www.youtube.com/@MrDamurier"><i class="bi bi-youtube"></i></a>
+      <div class="row">
+        <div class="col-lg-6 col-md-6 footer-info">
+          <h3 class="sitename">Carlos García</h3>
+          <p class="mb-4">Game Developer & Graphics Programmer passionate about creating innovative interactive experiences.</p>
+          <div class="d-flex align-items-center mb-4">
+            <i class="bi bi-envelope-fill me-2 text-accent"></i>
+            <a href="mailto:carlos.garcia@example.com">carlos.garcia@example.com</a>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 col-md-12 footer-contact">
+          <h4>Let's Connect</h4>
+          <p class="mb-3">Do you have an interesting project or job opportunity? Don't hesitate to contact me!</p>
+          <div class="social-links d-flex mb-4">
+            <a href="https://github.com/LeRayRC" class="github" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/carlos-garcía-roig-8a1536192" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.youtube.com/@MrDamurier" class="youtube" target="_blank"><i class="bi bi-youtube"></i></a>
+          </div>
+          <a href="https://drive.google.com/file/d/YOUR_CV_FILE_ID/view" target="_blank" class="btn btn-primary">Download CV <i class="bi bi-download ms-2"></i></a>
+        </div>
       </div>
+    </div>
+    
+    <div class="footer-bottom mt-5">
       <div class="container">
         <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Porfolio</strong> <span>All Rights Reserved</span>
+          <span>© Copyright</span> <strong class="px-1 sitename">Carlos García</strong> <span>2025. All Rights Reserved</span>
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          <div class="tech-stack">
+            <span>Built with:</span> 
+            <i class="bi bi-bootstrap" title="Bootstrap"></i>
+            <i class="bi bi-filetype-html" title="HTML5"></i>
+            <i class="bi bi-filetype-css" title="CSS3"></i>
+            <i class="bi bi-filetype-js" title="JavaScript"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -217,7 +287,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/particles.js"></script>
 </body>
 
 </html>
