@@ -4,12 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Details - Personal Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Rainbow Lab - Carlos García Portfolio</title>
+  <meta name="description" content="Detailed information about Rainbow Lab, an Unreal Engine project by Carlos García">
+  <meta name="keywords" content="game development, unreal engine, C++, materials, portfolio, academic project">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon.ico" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -27,32 +27,31 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- Custom Styles for Swiper -->
-  <style>
-    .swiper-slide {
-      overflow: hidden; /* Evita que el contenido se desborde */
-    }
-
-    .swiper-slide video {
-      width: 100%; /* Asegura que el video ocupe todo el ancho del slide */
-      height: auto; /* Mantiene la proporción del video */
-    }
-  </style>
+  <!-- Project Details CSS -->
+  <link href="assets/css/project-details.css" rel="stylesheet">
 </head>
 
 <body class="portfolio-details-page">
 
+  <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">Portfolio</h1>
       </a>
 
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#footer">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
     </div>
-  </header>
+  </header><!-- End Header -->
 
   <main class="main">
 
@@ -63,10 +62,11 @@
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
               <h1>Rainbow Lab</h1>
-              <h4>Project details</h4>
+              <h4>Unreal Engine Project</h4>
               <p class="mb-0">
-                First Unreal academic project related with colours.
-              </div>
+                A color-based puzzle game developed in Unreal Engine with C++
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -75,90 +75,231 @@
     <!-- Portfolio Details Section -->
     <section id="portfolio-details" class="portfolio-details section">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
 
-        <div class="row gy-4">
-
-          <div class="col-lg-8">
+        <!-- Top Section: Images and Brief Info -->
+        <div class="row mb-5">
+          <!-- Project Gallery - Centered -->
+          <div class="col-12" data-aos="fade-up">
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
+                <!-- Images/Videos -->
+
+                
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/rainbow-lab/main-menu.png" alt="">
+                  <div class="youtube-video-container">
+                    <iframe 
+                      width="100%" 
+                      height="100%" 
+                      src="https://www.youtube.com/embed/zJdR2wwoGIE?si=IF2US1U0CQHhOMmK" 
+                      title="YouTube video player" 
+                      frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      referrerpolicy="strict-origin-when-cross-origin" 
+                      allowfullscreen
+                      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                    </iframe>
+                  </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/rainbow-lab/game1.png" alt="">
+                  <img src="assets/img/portfolio/rainbow-lab/main-menu.png" alt="Rainbow Lab main menu">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/rainbow-lab/game2.png" alt="">
+                  <img src="assets/img/portfolio/rainbow-lab/game1.png" alt="Rainbow Lab gameplay 1">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/rainbow-lab/game3.png" alt="">
+                  <img src="assets/img/portfolio/rainbow-lab/game2.png" alt="Rainbow Lab gameplay 2">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/rainbow-lab/game4.png" alt="">
+                  <img src="assets/img/portfolio/rainbow-lab/game3.png" alt="Rainbow Lab gameplay 3">
                 </div>
 
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/rainbow-lab/game4.png" alt="Rainbow Lab gameplay 4">
+                </div>
               </div>
               <div class="swiper-pagination"></div>
+              <!-- Navigation buttons -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
             </div>
           </div>
+        </div>
 
-          <div class="col-lg-4">
-            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong> Academic project</li>
-                <li><strong>Project date</strong>: 2024</li>
-                <li><strong>Showcase</strong>: <a href="https://youtu.be/zJdR2wwoGIE">Youtube</a></li>
-              </ul>
-            </div>
-            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Description</h2>
+        <!-- Project Details Content -->
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-12">
+            <div class="portfolio-description">
+              <h2>About The Project</h2>
               <p>
-                Puzzle game programmed in Unreal with C++. A few months using the engine.
+                <strong>Rainbow Lab</strong> is my first academic project developed with Unreal Engine, created after just a few months of learning the engine. This color-based puzzle game challenges players to solve environmental puzzles by manipulating materials and colors throughout a laboratory setting.
               </p>
-              <div>
-                Features
-                <ul>
-                  <li> C++ for Unreal</li>
-                  <li> Material manipulation </li>
-                </ul>
+              <p>
+                The game explores the relationship between colors and gameplay mechanics, requiring players to match, combine, and transform colors to progress through the laboratory chambers. Using Unreal Engine's powerful material system, I implemented dynamic color-changing mechanics that affect both the visual appearance and functional properties of objects in the game world.
+              </p>
+              <p>
+                This project served as an introduction to Unreal Engine development, focusing on combining C++ programming with the engine's visual tools to create an interactive and visually cohesive experience centered around color theory.
+              </p>
+              
+
+              <div class="row mt-5">
+                <div class="col-md-8">
+                  <h3>Features</h3>
+                  <ul>
+                    <li>First-person puzzle gameplay focused on color manipulation</li>
+                    <li>Custom C++ classes for interactive elements and game mechanics</li>
+                    <li>Dynamic material parameter manipulation through gameplay</li>
+                    <li>Multiple puzzle chambers with increasing complexity</li>
+                    <li>Physics-based interactions for environmental puzzle-solving</li>
+                  </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Project Information</h3>
+                    <ul>
+                      <li><strong>Category:</strong> Academic Project</li>
+                      <li><strong>Project Date:</strong> 2024</li>
+                      <li><strong>Engine:</strong> Unreal Engine</li>
+                      <li><strong>Languages:</strong> C++, Blueprint</li>
+                      <li><strong>Focus:</strong> Material systems & gameplay</li>
+                      <li><strong>Showcase:</strong> <a href="https://youtu.be/zJdR2wwoGIE" target="_blank">YouTube</a></li>
+                    </ul>
+                </div>
+              </div>
+
+          
+          </div>
+        </div>
+        
+        <div class="row mt-5" data-aos="fade-up">
+          <div class="col-12">
+            <h3>Technical Highlights</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="tech-highlight-card">
+                  <h4><i class="bi bi-code-slash"></i> C++ Implementation in Unreal</h4>
+                  <p>Developed custom C++ classes that extend Unreal's actor and component system, creating interactive objects with specific behaviors. This approach allowed for more precise control over gameplay elements while learning the engine's programming framework.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="tech-highlight-card">
+                  <h4><i class="bi bi-palette"></i> Material Parameter System</h4>
+                  <p>Implemented a dynamic material parameter system that allows real-time modification of object appearances and properties. This core mechanic enables players to change colors and properties of objects, affecting how they interact with the environment and solve puzzles.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row mt-3">
+              <div class="col-md-6">
+                <div class="tech-highlight-card">
+                  <h4><i class="bi bi-puzzle"></i> Puzzle Design</h4>
+                  <p>Created color-based puzzles that require logical thinking and understanding of color theory. Each puzzle room presents unique challenges that build upon previously introduced mechanics, creating a progression of complexity throughout the game.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="tech-highlight-card">
+                  <h4><i class="bi bi-lightbulb"></i> Visual Feedback Systems</h4>
+                  <p>Designed clear visual feedback systems that help players understand the effects of their actions. Color changes, particle effects, and lighting adjustments all serve as intuitive indicators of the game state, helping players understand the puzzle mechanics without explicit instructions.</p>
+                </div>
               </div>
             </div>
           </div>
-
+        </div>
+        
+        <div class="row mt-4">
+          <div class="col-12">
+            <div class="system-requirements">
+              <h4><i class="bi bi-tags"></i> Technologies Used</h4>
+              <div class="technology-tags">
+                <span class="tag">Unreal Engine</span>
+                <span class="tag">C++</span>
+                <span class="tag">Material Editor</span>
+                <span class="tag">Blueprint</span>
+                <span class="tag">Level Design</span>
+                <span class="tag">Physics System</span>
+                <span class="tag">Post-Processing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="portfolio-description">
+              <h3>Learning Experience</h3>
+              <p>
+                Rainbow Lab represents my first major step into Unreal Engine development. Through this project, I gained valuable experience with the engine's architecture, workflow, and capabilities. The project helped me develop a strong foundation in:
+              </p>
+              <ul>
+                <li>Unreal's game framework and coding conventions</li>
+                <li>Material creation and parameter manipulation</li>
+                <li>Lighting and post-processing for atmospheric environments</li>
+                <li>Level design principles within the Unreal Editor</li>
+                <li>Integration between C++ and Blueprint systems</li>
+              </ul>
+              <p>
+                This experience has become the foundation for my continued work with Unreal Engine, informing my approach to more complex projects and specialized graphics programming within the engine.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Back to Portfolio -->
+        <div class="text-center mt-5" data-aos="fade-up">
+          <a href="index.html#portfolio" class="btn btn-primary">
+            <i class="bi bi-grid me-2"></i> Back to Portfolio
+          </a>
         </div>
 
       </div>
 
-    </section><!-- /Portfolio Details Section -->
+    </section><!-- End Portfolio Details Section -->
 
   </main>
 
+  <!-- Footer -->
   <footer id="footer" class="footer dark-background">
     <div class="container">
-      <h3 class="sitename">Contact</h3>
-      <p>You can find me in my social networks</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://github.com/LeRayRC"><i class="bi bi-github"></i></a>
-        <a href="www.linkedin.com/in/carlos-garcía-roig-8a1536192"><i class="bi bi-linkedin"></i></a>
-        <a href="https://www.youtube.com/@MrDamurier"><i class="bi bi-youtube"></i></a>
+      <div class="row">
+        <div class="col-lg-6 col-md-6 footer-info">
+          <h3 class="sitename">Carlos García</h3>
+          <p class="mb-4">Game Developer & Graphics Programmer passionate about creating innovative interactive experiences.</p>
+          <div class="d-flex align-items-center mb-4">
+            <i class="bi bi-envelope-fill me-2 text-accent"></i>
+            <a href="mailto:garciaroigcarlos@gmail.com">garciaroigcarlos@gmail.com</a>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 col-md-12 footer-contact">
+          <h4>Let's Connect</h4>
+          <p class="mb-3">Do you have an interesting project or job opportunity? Don't hesitate to contact me!</p>
+          <div class="social-links d-flex mb-4">
+            <a href="https://github.com/LeRayRC" class="github" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/carlos-garcía-roig-8a1536192" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.youtube.com/@MrDamurier" class="youtube" target="_blank"><i class="bi bi-youtube"></i></a>
+          </div>
+          <a href="https://drive.google.com/file/d/1533vU4ezIdTE50y7WUCjmv-tP6xiarbw/view?usp=sharing" target="_blank" class="btn btn-primary">Download CV <i class="bi bi-download ms-2"></i></a>
+        </div>
       </div>
+    </div>
+    
+    <div class="footer-bottom mt-5">
       <div class="container">
         <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Porfolio</strong> <span>All Rights Reserved</span>
+          <span>© Copyright</span> <strong class="px-1 sitename">Carlos García</strong> <span>2025. All Rights Reserved</span>
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          <div class="tech-stack">
+            <span>Built with:</span> 
+            <i class="bi bi-bootstrap" title="Bootstrap"></i>
+            <i class="bi bi-filetype-html" title="HTML5"></i>
+            <i class="bi bi-filetype-css" title="CSS3"></i>
+            <i class="bi bi-filetype-js" title="JavaScript"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -188,38 +329,89 @@
   <!-- Swiper Initialization -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const swiper = new Swiper('.portfolio-details-slider', {
-        loop: true,
-        speed: 600,
-        autoplay: {
-          delay: 5000,
-        },
-        slidesPerView: 'auto',
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'bullets',
-          clickable: true,
-        },
-        on: {
-          slideChange: function () {
-            const videos = document.querySelectorAll('.portfolio-details-slider video');
-            videos.forEach(video => {
-              video.pause();
-            });
-          },
-          slideChangeTransitionEnd: function () {
-            const activeSlide = this.slides[this.activeIndex];
-            const activeVideo = activeSlide.querySelector('video');
-            if (activeVideo) {
-              activeVideo.currentTime = 0; // Reinicia el video
-              activeVideo.play(); // Reproduce el video
-            }
-          }
-        },
-      });
-    });
-  </script>
-
+      if (typeof Swiper !== 'undefined') {
+        const swiper = new Swiper('.portfolio-details-slider', {
+          // Enable loop mode to allow continuous navigation
+          loop: true,
+          
+          // Navigation settings
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            disabledClass: 'swiper-button-disabled'
+           },
+           
+           // Pagination settings
+           pagination: {
+             el: '.swiper-pagination',
+             clickable: true
+           },
+           
+           // Autoplay settings
+           autoplay: {
+             delay: 5000,
+             // IMPORTANT: Allow user interaction
+             disableOnInteraction: false,
+             // Pause autoplay on user interaction
+             pauseOnMouseEnter: true
+           },
+           
+           // Ensure user can interact
+           allowTouchMove: true,
+           simulateTouch: true,
+           
+           // Transition speed
+           speed: 600,
+           
+           // Keyboard navigation
+           keyboard: {
+             enabled: true
+           },
+           
+           // Handle video slides
+           on: {
+             slideChange: function () {
+               // Pause all videos when changing slides
+               const videos = document.querySelectorAll('.portfolio-details-slider video');
+               videos.forEach(video => {
+                 video.pause();
+               });
+             },
+             slideChangeTransitionEnd: function () {
+               // Reset and play video on the active slide
+               const activeSlide = this.slides[this.activeIndex];
+               const activeVideo = activeSlide.querySelector('video');
+               if (activeVideo) {
+                 activeVideo.currentTime = 0;
+                 activeVideo.play();
+               }
+             },
+             // Restart autoplay after manual interaction
+             touchEnd: function () {
+               if (this.autoplay.running) {
+                 this.autoplay.stop();
+                 this.autoplay.start();
+               }
+             }
+           }
+         });
+         
+         // Optional: Add manual controls to pause/play autoplay
+         const swiperContainer = document.querySelector('.portfolio-details-slider');
+         
+         swiperContainer.addEventListener('mouseenter', () => {
+           swiper.autoplay.stop();
+         });
+         
+         swiperContainer.addEventListener('mouseleave', () => {
+           swiper.autoplay.start();
+         });
+       } else {
+         console.error('Swiper library not loaded. Please check the script inclusion.');
+       }
+     });
+   </script>
+  
 </body>
 
 </html>
