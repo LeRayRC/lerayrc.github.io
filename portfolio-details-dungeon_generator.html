@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Dungeon Generator - Carlos García Portfolio</title>
+  <meta name="description" content="Detailed information about Dungeon Generator, an AI-driven procedural level generation tool by Carlos García">
+  <meta name="keywords" content="procedural generation, algorithms, C++, dungeon generator, AI, BSP, Kruskal, Wave Function Collapse">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Project Details CSS -->
+  <link href="assets/css/project-details.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">Portfolio</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#footer">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>Dungeon Generator</h1>
+              <h4>Procedural Level Generation Tool</h4>
+              <p class="mb-0">
+                An AI-driven tool for procedurally generating dungeon layouts with advanced algorithms
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container">
+
+        <!-- Top Section: Images and Brief Info -->
+        <div class="row mb-5">
+          <!-- Project Gallery - Centered -->
+          <div class="col-12" data-aos="fade-up">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <div class="youtube-video-container">
+                    <iframe 
+                      width="100%" 
+                      height="100%" 
+                      src="https://www.youtube.com/embed/iZCBI7SdH8Q?si=9uGisn-hh9L_x-M8" 
+                      title="YouTube video player" 
+                      frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      referrerpolicy="strict-origin-when-cross-origin" 
+                      allowfullscreen
+                      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                    </iframe>
+                  </div>
+                </div>
+                <!-- Images/Videos -->
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/dungeon-generator/6.png" alt="6">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/dungeon-generator/5.png" alt="5">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/dungeon-generator/4.png" alt="4">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/dungeon-generator/3.png" alt="3">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/dungeon-generator/2.png" alt="2">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/dungeon-generator/1.png" alt="1">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <!-- Navigation buttons -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Details Content -->
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-12">
+            <div class="portfolio-description">
+              <h2>About The Project</h2>
+              <p>
+                The <strong>Dungeon Generator</strong> is an AI-powered procedural content generation tool that creates unique dungeon layouts for video games. Built from scratch in C++ using ESAT's graphics library, this tool implements multiple advanced algorithms to generate varied, balanced, and visually consistent dungeon environments.
+              </p>
+              <p>
+                The tool employs a multi-stage generation process: first using Binary Space Partitioning (BSP) to subdivide the space into rooms, then applying Kruskal's algorithm to create a Minimal Spanning Tree that connects all rooms with corridors, and finally utilizing Wave Function Collapse for procedural texturing that follows consistent rules. The entire process is highly customizable through an ImGui interface that allows for real-time parameter adjustment.
+              </p>
+              <p>
+                This project demonstrates the power of combining established algorithmic approaches with modern procedural generation techniques to create a versatile tool that could be integrated into a game development pipeline to rapidly create varied level layouts.
+              </p>
+
+            </div>
+
+
+            <div class="row mt-5">
+              <div class="col-md-8">
+                <h3>Features</h3>
+                <ul>
+                  <li>BSP (Binary Space Partitioning) for dynamic room layout generation</li>
+                  <li>Kruskal's algorithm implementation for creating minimum spanning trees that connect all rooms</li>
+                  <li>Wave Function Collapse algorithm for coherent procedural texturing of rooms and corridors</li>
+                  <li>ImGui interface for real-time parameter adjustments and visualization controls</li>
+                  <li>Customizable generation parameters including room size, corridor width, and complexity</li>
+                  <li>Visualization modes showing different stages of the generation process</li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                  <h3>Project Information</h3>
+                  <ul>
+                    <li><strong>Category:</strong> AI/Procedural Generation</li>
+                    <li><strong>Project Date:</strong> 2024</li>
+                    <li><strong>Showcase:</strong> <a href="https://youtu.be/iZCBI7SdH8Q" target="_blank">YouTube</a></li>
+                    <li><strong>Language:</strong> C++</li>
+                    <li><strong>Graphics:</strong> ESAT Library</li>
+                  </ul>
+              </div>
+            </div>
+
+
+          </div>
+          
+        </div>
+        
+        <div class="row mt-5" data-aos="fade-up">
+          <div class="col-12">
+            <h3>Technical Highlights</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="tech-highlight-card">
+                  <h4><i class="bi bi-grid-3x3"></i> Binary Space Partitioning (BSP)</h4>
+                  <p>Implemented a recursive BSP algorithm that intelligently subdivides the dungeon space into rooms of varying sizes. The implementation includes customizable parameters for controlling minimum room size, partition variance, and subdivision depth to ensure diverse yet playable room layouts.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="tech-highlight-card">
+                  <h4><i class="bi bi-diagram-3"></i> Kruskal's Algorithm for MST</h4>
+                  <p>Applied Kruskal's algorithm to generate a Minimal Spanning Tree that connects all dungeon rooms with optimal pathway efficiency. The implementation includes disjoint-set data structures for efficient room connectivity checks and prioritizes connections based on distance measures to create natural-feeling dungeon flow.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row mt-3">
+              <div class="col-md-6">
+                <div class="tech-highlight-card">
+                  <h4><i class="bi bi-magic"></i> Wave Function Collapse</h4>
+                  <p>Developed a constraint-based Wave Function Collapse implementation for procedural texturing that follows coherent visual rules. This system observes adjacency constraints between different texture types, resulting in natural-looking environments where wall textures properly connect to floor textures and special features appear in appropriate locations.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="tech-highlight-card">
+                  <h4><i class="bi bi-sliders"></i> Interactive Parameter Control</h4>
+                  <p>Created an intuitive ImGui interface that exposes all generation parameters for real-time adjustment. This allows users to fine-tune the dungeon generation process while immediately seeing the results, making it easy to discover interesting parameter combinations and design dungeon layouts with specific characteristics.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row mt-4">
+          <div class="col-12">
+            <div class="system-requirements">
+              <h4><i class="bi bi-tags"></i> Technologies Used</h4>
+              <div class="technology-tags">
+                <span class="tag">C++</span>
+                <span class="tag">ESAT Graphics Library</span>
+                <span class="tag">ImGui</span>
+                <span class="tag">Procedural Generation</span>
+                <span class="tag">BSP</span>
+                <span class="tag">Minimal Spanning Trees</span>
+                <span class="tag">Wave Function Collapse</span>
+                <span class="tag">Graph Theory</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="portfolio-description">
+              <h3>Applications &amp; Future Work</h3>
+              <p>
+                This procedural dungeon generator has numerous applications in game development, from quickly prototyping level designs to generating endless content for roguelike games. The tool could be extended in several ways:
+              </p>
+              <ul>
+                <li>Integration with game engines like Unity or Unreal Engine as a plugin</li>
+                <li>Addition of more advanced constraint systems for themed dungeons (castles, caves, temples)</li>
+                <li>Implementation of difficulty mapping to create progressively challenging dungeon layouts</li>
+                <li>Expansion to include procedural object and enemy placement based on room types and connections</li>
+                <li>Development of 3D dungeon generation capabilities using similar algorithmic approaches</li>
+              </ul>
+              <p>
+                The algorithmic foundations implemented in this project provide a solid basis for more complex procedural content generation systems that could significantly reduce level design time while maintaining high-quality, coherent environments.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Back to Portfolio -->
+        <div class="text-center mt-5" data-aos="fade-up">
+          <a href="index.html#portfolio" class="btn btn-primary">
+            <i class="bi bi-grid me-2"></i> Back to Portfolio
+          </a>
+        </div>
+
+      </div>
+
+    </section><!-- End Portfolio Details Section -->
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 footer-info">
+          <h3 class="sitename">Carlos García</h3>
+          <p class="mb-4">Game Developer & Graphics Programmer passionate about creating innovative interactive experiences.</p>
+          <div class="d-flex align-items-center mb-4">
+            <i class="bi bi-envelope-fill me-2 text-accent"></i>
+            <a href="mailto:garciaroigcarlos@gmail.com">garciaroigcarlos@gmail.com</a>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 col-md-12 footer-contact">
+          <h4>Let's Connect</h4>
+          <p class="mb-3">Do you have an interesting project or job opportunity? Don't hesitate to contact me!</p>
+          <div class="social-links d-flex mb-4">
+            <a href="https://github.com/LeRayRC" class="github" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/carlos-garcía-roig-8a1536192" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.youtube.com/@MrDamurier" class="youtube" target="_blank"><i class="bi bi-youtube"></i></a>
+          </div>
+          <a href="https://drive.google.com/file/d/1533vU4ezIdTE50y7WUCjmv-tP6xiarbw/view?usp=sharing" target="_blank" class="btn btn-primary">Download CV <i class="bi bi-download ms-2"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom mt-5">
+      <div class="container">
+        <div class="copyright">
+          <span>© Copyright</span> <strong class="px-1 sitename">Carlos García</strong> <span>2025. All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          <div class="tech-stack">
+            <span>Built with:</span> 
+            <i class="bi bi-bootstrap" title="Bootstrap"></i>
+            <i class="bi bi-filetype-html" title="HTML5"></i>
+            <i class="bi bi-filetype-css" title="CSS3"></i>
+            <i class="bi bi-filetype-js" title="JavaScript"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Swiper Initialization -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof Swiper !== 'undefined') {
+        const swiper = new Swiper('.portfolio-details-slider', {
+          // Enable loop mode to allow continuous navigation
+          loop: true,
+          
+          // Navigation settings
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            disabledClass: 'swiper-button-disabled'
+           },
+           
+           // Pagination settings
+           pagination: {
+             el: '.swiper-pagination',
+             clickable: true
+           },
+           
+           // Autoplay settings
+           autoplay: {
+             delay: 5000,
+             // IMPORTANT: Allow user interaction
+             disableOnInteraction: false,
+             // Pause autoplay on user interaction
+             pauseOnMouseEnter: true
+           },
+           
+           // Ensure user can interact
+           allowTouchMove: true,
+           simulateTouch: true,
+           
+           // Transition speed
+           speed: 600,
+           
+           // Keyboard navigation
+           keyboard: {
+             enabled: true
+           },
+           
+           // Handle video slides
+           on: {
+             slideChange: function () {
+               // Pause all videos when changing slides
+               const videos = document.querySelectorAll('.portfolio-details-slider video');
+               videos.forEach(video => {
+                 video.pause();
+               });
+             },
+             slideChangeTransitionEnd: function () {
+               // Reset and play video on the active slide
+               const activeSlide = this.slides[this.activeIndex];
+               const activeVideo = activeSlide.querySelector('video');
+               if (activeVideo) {
+                 activeVideo.currentTime = 0;
+                 activeVideo.play();
+               }
+             },
+             // Restart autoplay after manual interaction
+             touchEnd: function () {
+               if (this.autoplay.running) {
+                 this.autoplay.stop();
+                 this.autoplay.start();
+               }
+             }
+           }
+         });
+         
+         // Optional: Add manual controls to pause/play autoplay
+         const swiperContainer = document.querySelector('.portfolio-details-slider');
+         
+         swiperContainer.addEventListener('mouseenter', () => {
+           swiper.autoplay.stop();
+         });
+         
+         swiperContainer.addEventListener('mouseleave', () => {
+           swiper.autoplay.start();
+         });
+       } else {
+         console.error('Swiper library not loaded. Please check the script inclusion.');
+       }
+     });
+   </script>
+  
+</body>
+
+</html>
