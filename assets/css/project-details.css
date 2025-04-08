@@ -93,7 +93,7 @@
 /* Ensure portfolio-info doesn't interfere */
 .portfolio-info {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 /* Additional interaction styles */
