@@ -1344,7 +1344,7 @@ section,
 .hero-section h1 {
   font-size: 4rem;
   font-weight: 800;
-  color: #d21818; /* Rojo sólido en lugar de gradiente transparente */
+  color: #ffffff; /* Rojo sólido en lugar de gradiente transparente */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra más pronunciada */
 }
 
