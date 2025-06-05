@@ -1706,14 +1706,13 @@ section,
 }
 
 /* Mobile adjustments for YouTube video */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .video-background iframe {
-    /* Adjust these values as needed for better mobile display */
     width: 300%;
     height: 100%;
     left: -100%;
   }
-}
+} */
 
 /* Ensure overlay covers the iframe properly */
 .video-background .overlay {
