@@ -58,11 +58,11 @@
       <div class="video-background">
         <!-- YouTube iframe with autoplay, mute and no controls -->
          <iframe id="youtube-video"
-  src="https://www.youtube.com/embed/7HY3YPrcrqA?autoplay=1&mute=1&controls=0&loop=1&playlist=7HY3YPrcrqA&modestbranding=1&rel=0"
-  title="YouTube video player" frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-</iframe>
+              src="https://www.youtube.com/embed/7HY3YPrcrqA?autoplay=1&mute=1&controls=0&loop=1&playlist=7HY3YPrcrqA&modestbranding=1&rel=0"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+          </iframe>
       </div>
       <div class="container">
         <div class="row">
@@ -101,19 +101,24 @@
       
       <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
       
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-unreal">
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-unreal">
           <div class="portfolio-card">
             <div class="portfolio-content">
-              <div class="portfolio-image-container">
-                <img src="assets/img/portfolio/elysian/logo.png" alt="Rainbow Lab">
+              <div class="portfolio-video-container">
+                <video autoplay muted loop playsinline>
+                  <source src="assets/video/elysian-preview.mp4" type="video/mp4">
+                  <!-- Fallback para navegadores que no soportan video -->
+                  <img src="assets/img/portfolio/elysian/logo.png" alt="Elysian Siege">
+                </video>
               </div>
               <div class="portfolio-info">
                 <div class="portfolio-info-content">
                   <h4>Elysian Siege: The prince's uprising</h4>
-                  <p>HND Final Project</p>
+                  <p>HND Final Project - A 2.5D platformer game</p>
                   <div class="portfolio-links">
-                    <a href="assets/img/portfolio/elysian/logo.png" title="Elysian Siege: The Prince's Uprising" data-gallery="elysian-seige" class="glightbox preview-link"><i class="bi bi-eye"></i></a>
-                    <a href="portfolio-details-elysian.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                    <a href="portfolio-details-elysian.html" title="More Details" class="btn btn-sm btn-success">View
+                      Project</a>
                   </div>
                   <div class="portfolio-tags">
                     <span class="tag">Unreal</span>
@@ -127,19 +132,54 @@
         </div>
 
 
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gp">
+          <div class="portfolio-card">
+            <div class="portfolio-content">
+              <div class="portfolio-video-container">
+                <video autoplay muted loop playsinline>
+                  <source src="assets/video/LavaEnginePreview.mp4" type="video/mp4">
+                  <!-- Fallback para navegadores que no soportan video -->
+                  <img src="assets/img/portfolio/lavaengine/lava_engine_1.png" alt="Lava Engine">
+                </video>
+              </div>
+              <div class="portfolio-info">
+                <div class="portfolio-info-content">
+                  <h4>Lava Engine</h4>
+                  <p>Custom Vulkan Rendering Engine </p>
+                  <div class="portfolio-links">
+                    <a href="portfolio-details-lava-engine.html" title="More Details" class="btn btn-sm btn-success">View
+                      Project</a>
+                  </div>
+                  <div class="portfolio-tags">
+                    <span class="tag">Vulkan</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">ECS</span>
+                    <span class="tag">GLTF</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-others">
           <div class="portfolio-card">
             <div class="portfolio-content">
-              <div class="portfolio-image-container">
-                <img src="assets/img/portfolio/dungeon-generator/6.png" alt="Dungeon Generator">
+              <div class="portfolio-video-container">
+                <video autoplay muted loop playsinline>
+                  <source src="assets/video/DungeonGeneratorPreview.mp4" type="video/mp4">
+                  <!-- Fallback para navegadores que no soportan video -->
+                  <img src="assets/img/portfolio/dungeon-generator/1.png" alt="Dungeon generator">
+                </video>
               </div>
               <div class="portfolio-info">
                 <div class="portfolio-info-content">
                   <h4>Dungeon Generator</h4>
                   <p>Procedural Level Generation Tool</p>
                   <div class="portfolio-links">
-                    <a href="assets/img/portfolio/dungeon-generator/6.png" title="Dungeon Generator" data-gallery="Dungeon Generator" class="glightbox preview-link"><i class="bi bi-eye"></i></a>
-                    <a href="portfolio-details-dungeon_generator.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                    <a href="portfolio-details-dungeon_generator.html" title="More Details" class="btn btn-sm btn-success">View
+                      Project</a>
                   </div>
                   <div class="portfolio-tags">
                     <span class="tag">C++</span>
@@ -158,8 +198,12 @@
         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-unity">
           <div class="portfolio-card">
             <div class="portfolio-content">
-              <div class="portfolio-image-container">
-                <img src="assets/img/portfolio/dungeons/2.png" alt="Asteroids">
+              <div class="portfolio-video-container">
+                <video autoplay muted loop playsinline>
+                  <source src="assets/video/DungeonBubblesPreview.mp4" type="video/mp4">
+                  <!-- Fallback para navegadores que no soportan video -->
+                  <img src="assets/img/portfolio/dungeons/1.png" alt="Dungeon Bubbles">
+                </video>
               </div>
             
               <div class="portfolio-info">
@@ -167,8 +211,8 @@
                   <h4>Dungeons & Bubbles</h4>
                   <p>2025 Global Game Jam Project</p>
                   <div class="portfolio-links">
-                    <a href="assets/img/portfolio/dungeons/2.png" title="Dungeons & Bubbles" data-gallery="DungeonsAndBubbles" class="glightbox preview-link"><i class="bi bi-eye"></i></a>
-                    <a href="portfolio-details-dungeons_and_bubbles.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                    <a href="portfolio-details-dungeons_and_bubbles.html" title="More Details" class="btn btn-sm btn-success">View
+                      Project</a>
                   </div>
                   <div class="portfolio-tags">
                     <span class="tag">C#</span>
@@ -181,43 +225,23 @@
           </div>
         </div>
 
-        <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-others">
-          <div class="portfolio-card">
-            <div class="portfolio-content">
-              <div class="portfolio-image-container">
-                <img src="assets/img/portfolio/asteroids/game.png" alt="Asteroids">
-              </div>
-              <div class="portfolio-info">
-                <div class="portfolio-info-content">
-                  <h4>Asteroids</h4>
-                  <p>First year final academic project</p>
-                  <div class="portfolio-links">
-                    <a href="assets/img/portfolio/asteroids/game.png" title="Asteroids" data-gallery="asteroids" class="glightbox preview-link"><i class="bi bi-eye"></i></a>
-                    <a href="portfolio-details-asteroids.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                  </div>
-                  <div class="portfolio-tags">
-                    <span class="tag">C++</span>
-                    <span class="tag">ESAT</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gp">
           <div class="portfolio-card">
             <div class="portfolio-content">
-              <div class="portfolio-image-container">
-                <img src="assets/img/portfolio/demo-reel/entities_manager.png" alt="OpenGL Demo reel">
+              <div class="portfolio-video-container">
+                <video autoplay muted loop playsinline>
+                  <source src="assets/video/DemoReemPreview.mp4" type="video/mp4">
+                  <!-- Fallback para navegadores que no soportan video -->
+                  <img src="assets/img/portfolio/demo-reel/entities_manager.png" alt="Demo Reel">
+                </video>
               </div>
               <div class="portfolio-info">
                 <div class="portfolio-info-content">
                   <h4>OpenGL Demo reel</h4>
                   <p>Graphics programming final project</p>
                   <div class="portfolio-links">
-                    <a href="assets/img/portfolio/demo-reel/entities_manager.png" title="OpenGL Demo" data-gallery="demo-reel" class="glightbox preview-link"><i class="bi bi-eye"></i></a>
-                    <a href="portfolio-details-demo-reel.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                    <a href="portfolio-details-demo-reel.html" title="More Details" class="btn btn-sm btn-success">View
+                      Project</a>
                   </div>
                   <div class="portfolio-tags">
                     <span class="tag">OpenGL</span>
@@ -233,16 +257,20 @@
         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-unity">
           <div class="portfolio-card">
             <div class="portfolio-content">
-              <div class="portfolio-image-container">
-                <img src="assets/img/portfolio/water-time/game_2.png" alt="Water Time">
+              <div class="portfolio-video-container">
+                <video autoplay muted loop playsinline>
+                  <source src="assets/video/WaterTimePreview.mp4" type="video/mp4">
+                  <!-- Fallback para navegadores que no soportan video -->
+                  <img src="assets/img/portfolio/water-time/game_1.png" alt="Demo Reel">
+                </video>
               </div>
               <div class="portfolio-info">
                 <div class="portfolio-info-content">
                   <h4>Water Time</h4>
                   <p>VR Academic project in Unity</p>
                   <div class="portfolio-links">
-                    <a href="assets/img/portfolio/water-time/game_2.png" title="Water Time" data-gallery="water-time" class="glightbox preview-link"><i class="bi bi-eye"></i></a>
-                    <a href="portfolio-details-water-time.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                    <a href="portfolio-details-water-time.html" title="More Details" class="btn btn-sm btn-success">View
+                      Project</a>
                   </div>
                   <div class="portfolio-tags">
                     <span class="tag">Unity</span>
@@ -258,16 +286,20 @@
         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-unity">
           <div class="portfolio-card">
             <div class="portfolio-content">
-              <div class="portfolio-image-container">
-                <img src="assets/img/portfolio/amousing/tutorial.png" alt="Amousing">
+              <div class="portfolio-video-container">
+                <video autoplay muted loop playsinline>
+                  <source src="assets/video/AmousingPreview.mp4" type="video/mp4">
+                  <!-- Fallback para navegadores que no soportan video -->
+                  <img src="assets/img/portfolio/amousing/tutorial.png" alt="Demo Reel">
+                </video>
               </div>
               <div class="portfolio-info">
                 <div class="portfolio-info-content">
                   <h4>Amousing</h4>
                   <p>Unity project using only mouse buttons</p>
                   <div class="portfolio-links">
-                    <a href="assets/img/portfolio/amousing/tutorial.png" title="Amousing" data-gallery="amousing" class="glightbox preview-link"><i class="bi bi-eye"></i></a>
-                    <a href="portfolio-details-amousing.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                    <a href="portfolio-details-amousing.html" title="More Details" class="btn btn-sm btn-success">View
+                      Project</a>
                   </div>
                   <div class="portfolio-tags">
                     <span class="tag">Unity</span>

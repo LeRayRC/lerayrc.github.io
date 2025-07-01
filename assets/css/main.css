@@ -1726,3 +1726,62 @@ section,
 }
 
 
+/* Estilos para el contenedor de video */
+.portfolio-video-container {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio-video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-content:hover .portfolio-video-container video {
+  transform: scale(1.05);
+}
+
+/* Ajustes para el hover */
+.portfolio-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(210, 24, 24, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.portfolio-content:hover .portfolio-info {
+  opacity: 1;
+}
+
+.portfolio-info-content {
+  padding: 20px;
+  text-align: center;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s ease 0.1s;
+}
+
+.portfolio-content:hover .portfolio-info-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Botón de más información */
+.portfolio-info .btn {
+  margin-top: 15px;
+  padding: 8px 20px;
+  font-size: 14px;
+}
