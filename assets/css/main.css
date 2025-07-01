@@ -188,7 +188,7 @@ h6 {
 }
 
 .header {
-  background-color: rgba(0, 0, 0, 0.9); /* Fondo casi opaco */
+  background-color: rgba(0, 0, 0, 1.0); /* Fondo casi opaco */
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -1784,4 +1784,76 @@ section,
   margin-top: 15px;
   padding: 8px 20px;
   font-size: 14px;
+}
+
+
+/* Estilos para el botón de Steam */
+.btn-steam {
+  background-color: #1b2838;
+  border-color: #66c0f4;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(27, 40, 56, 0.3);
+  border-width: 2px;
+  animation: steam-pulse 2s infinite;
+}
+
+.btn-steam:hover {
+  background-color: #2a475e;
+  border-color: #c7d5e0;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(27, 40, 56, 0.4);
+  color: white;
+}
+
+/* Badge de "Available Now" */
+.steam-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #5ba32b;
+  color: white;
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-weight: bold;
+  transform: rotate(15deg);
+  animation: badge-pulse 1.5s infinite alternate;
+}
+
+/* Animaciones */
+@keyframes steam-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(102, 192, 244, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(102, 192, 244, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(102, 192, 244, 0);
+  }
+}
+
+@keyframes badge-pulse {
+  from {
+    transform: rotate(15deg) scale(1);
+  }
+  to {
+    transform: rotate(15deg) scale(1.1);
+  }
+}
+
+/* Ajustes para la disposición de botones */
+@media (max-width: 768px) {
+  .hero-buttons .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .hero-buttons .btn:last-child {
+    margin-bottom: 0;
+  }
 }
