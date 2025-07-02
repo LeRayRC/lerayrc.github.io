@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Vulkan Rendering Engine - Carlos García Portfolio</title>
+  <meta name="description" content="Advanced Vulkan Rendering Engine developed as final project for Advanced Rendering course">
+  <meta name="keywords" content="Vulkan, graphics programming, rendering engine, ECS, PBR, C++, advanced rendering">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Project Details CSS -->
+  <link href="assets/css/project-details.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">Portfolio</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#footer">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>Vulkan Rendering Engine</h1>
+              <h4>Advanced Rendering Final Project</h4>
+              <p class="mb-0">
+                A high-performance rendering engine implementing modern graphics techniques with Vulkan API
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container">
+
+        <!-- Top Section: Images and Brief Info -->
+        <div class="row mb-5">
+          <!-- Project Gallery - Centered -->
+          <div class="col-12" data-aos="fade-up">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+                <!-- Video Demo -->
+                <div class="swiper-slide">
+                  <div class="youtube-video-container">
+                    <iframe 
+                      width="100%" 
+                      height="100%" 
+                      src="https://www.youtube.com/embed/rAMAAVxBTm0?si=6fsDoo6CfVhpCdEc?autoplay=0&mute=0&controls=1" 
+                      title="Vulkan Engine Demo" 
+                      frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      referrerpolicy="strict-origin-when-cross-origin" 
+                      allowfullscreen>
+                    </iframe>
+                  </div>
+                </div>
+
+                <!-- Screenshots -->
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/lavaengine/lava_engine_1.png" alt="Forward vs Deferred Rendering">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/lavaengine/lava_engine_2.png" alt="PBR Materials">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/lavaengine/lava_engine_3.png" alt="Shadow Mapping">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/lavaengine/lava_engine_4.png" alt="VR Rendering">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/lavaengine/lava_engine_5.png" alt="ECS Editor">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/lavaengine/lava_engine_6.png" alt="Lighting System">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/lavaengine/lava_engine_7.png" alt="Lighting System">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <!-- Navigation buttons -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Details Content -->
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-12">
+            <div class="portfolio-description">
+              <h2>About The Project</h2>
+              <p>
+                The <strong>Vulkan Rendering Engine</strong> represents my most advanced work in graphics programming to date, developed as the final project for my Advanced Rendering course. This engine implements modern rendering techniques using the low-level Vulkan API, providing both high performance and visual fidelity.
+              </p>
+              <p>
+                Built from the ground up in C++ with Vulkan, this engine features multiple rendering paths, an Entity-Component-System architecture, and a job system for efficient parallel processing. The project demonstrates my ability to work with complex graphics APIs and implement cutting-edge rendering techniques.
+              </p>
+              <p>
+                This engine was designed to be both a technical showcase and a practical foundation for future projects, with particular attention paid to performance optimization and extensibility.
+              </p>
+              
+              <h3 class="mt-5">Features</h3>
+              <div class="row">
+                <div class="col-md-8">
+                  <ul>
+                    <li><strong>Dual Render Paths:</strong> Forward and Deferred rendering pipelines</li>
+                    <li><strong>ECS Architecture:</strong> Entity-Component-System for efficient game object management</li>
+                    <li><strong>Job System:</strong> Multithreaded task scheduling for optimal CPU utilization</li>
+                    <li><strong>PBR Materials:</strong> Physically Based Rendering with metallic-roughness workflow</li>
+                    <li><strong>Advanced Shadows:</strong> Shadow Mapping with Cascade Shadow Maps for directional lights</li>
+                    <li><strong>VR Support:</strong> Specialized rendering path for virtual reality</li>
+                    <li><strong>Dynamic Lighting:</strong> Point, Spot and Directional lights with proper attenuation</li>
+                    <li><strong>Vulkan Optimizations:</strong> Pipeline caching, descriptor sets management</li>
+                    <li><strong>Debug Tools:</strong> Real-time rendering statistics and debug visualization</li>
+                  </ul>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="tech-highlight-card">
+                    <h3>Project Information</h3>
+                    <ul>
+                      <li><strong>Category:</strong> Academic Project</li>
+                      <li><strong>Project Date:</strong> 2025</li>
+                      <li><strong>Languages:</strong> C++, GLSL</li>
+                      <li><strong>Graphics API:</strong> Vulkan</li>
+                      <li><strong>Focus Area:</strong> Low-level rendering optimization</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row mt-5" data-aos="fade-up">
+          <div class="col-12">
+            <h3>Technical Highlights</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="tech-highlight-card">
+                  <h4><i class="bi bi-gpu-card"></i> Vulkan Implementation</h4>
+                  <p>Developed a complete Vulkan rendering pipeline from scratch, including proper resource management, synchronization, and pipeline state optimization. Implemented descriptor set management strategies to minimize API overhead and maximize performance.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="tech-highlight-card">
+                  <h4><i class="bi bi-lightbulb"></i> Lighting System</h4>
+                  <p>Implemented a comprehensive lighting system supporting all light types with proper PBR integration. The system efficiently manages light culling and shading in both forward and deferred rendering paths, with special attention to performance in complex scenes.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row mt-3">
+              <div class="col-md-6">
+                <div class="tech-highlight-card">
+                  <h4><i class="bi bi-layers"></i> ECS Architecture</h4>
+                  <p>Designed an Entity-Component-System architecture that cleanly separates data, behavior, and rendering. The system allows for efficient processing of game objects and optimal cache utilization, with specialized systems for rendering, and gameplay logic.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="tech-highlight-card">
+                  <h4><i class="bi bi-cpu"></i> Job System</h4>
+                  <p>Created a multithreaded job system that efficiently distributes work across available CPU cores. The system includes dependencies management, work stealing, and specialized queues for different types of tasks (rendering, physics, etc.).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row mt-4">
+          <div class="col-12">
+            <div class="system-requirements">
+              <h4><i class="bi bi-tags"></i> Technologies Used</h4>
+              <div class="technology-tags">
+                <span class="tag">Vulkan</span>
+                <span class="tag">C++20</span>
+                <span class="tag">GLSL</span>
+                <span class="tag">ECS</span>
+                <span class="tag">PBR</span>
+                <span class="tag">Multithreading</span>
+                <span class="tag">Shadow Mapping</span>
+                <span class="tag">VR Rendering</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="portfolio-description">
+              <h3>Learning Outcomes</h3>
+              <p>
+                Developing this Vulkan engine was an intensive deep dive into modern graphics programming and low-level API optimization. The project gave me hands-on experience with advanced rendering techniques, parallel programming patterns, and performance optimization strategies that are crucial for high-end graphics applications.
+              </p>
+              <p>
+                Working directly with Vulkan provided invaluable insights into the inner workings of graphics pipelines and the performance considerations of modern rendering engines. The experience has significantly enhanced my ability to analyze and optimize rendering performance in complex scenes.
+              </p>
+              <p>
+                The architecture decisions made during this project, particularly around the ECS system and job system, have informed my approach to engine design in subsequent projects, emphasizing scalability and performance.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Back to Portfolio -->
+        <div class="text-center mt-5" data-aos="fade-up">
+          <a href="index.html#portfolio" class="btn btn-primary">
+            <i class="bi bi-grid me-2"></i> Back to Portfolio
+          </a>
+        </div>
+
+      </div>
+
+    </section><!-- End Portfolio Details Section -->
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 footer-info">
+          <h3 class="sitename">Carlos García</h3>
+          <p class="mb-4">Game Developer & Graphics Programmer passionate about creating innovative interactive experiences.</p>
+          <div class="d-flex align-items-center mb-4">
+            <i class="bi bi-envelope-fill me-2 text-accent"></i>
+            <a href="mailto:garciaroigcarlos@gmail.com">garciaroigcarlos@gmail.com</a>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 col-md-12 footer-contact">
+          <h4>Let's Connect</h4>
+          <p class="mb-3">Do you have an interesting project or job opportunity? Don't hesitate to contact me!</p>
+          <div class="social-links d-flex mb-4">
+            <a href="https://github.com/LeRayRC" class="github" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/carlos-garcía-roig-8a1536192" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.youtube.com/@MrDamurier" class="youtube" target="_blank"><i class="bi bi-youtube"></i></a>
+          </div>
+          <a href="https://drive.google.com/file/d/1EbbQASTSwdh-7SUdQLPUG1BVfEaACrP9/view?usp=sharing" target="_blank" class="btn btn-primary">Download CV <i class="bi bi-download ms-2"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom mt-5">
+      <div class="container">
+        <div class="copyright">
+          <span>© Copyright</span> <strong class="px-1 sitename">Carlos García</strong> <span>2025. All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          <div class="tech-stack">
+            <span>Built with:</span> 
+            <i class="bi bi-bootstrap" title="Bootstrap"></i>
+            <i class="bi bi-filetype-html" title="HTML5"></i>
+            <i class="bi bi-filetype-css" title="CSS3"></i>
+            <i class="bi bi-filetype-js" title="JavaScript"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Swiper Initialization -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof Swiper !== 'undefined') {
+        const swiper = new Swiper('.portfolio-details-slider', {
+          // Enable loop mode to allow continuous navigation
+          loop: true,
+          
+          // Navigation settings
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            disabledClass: 'swiper-button-disabled'
+           },
+           
+           // Pagination settings
+           pagination: {
+             el: '.swiper-pagination',
+             clickable: true
+           },
+           
+           // Autoplay settings
+           autoplay: {
+             delay: 5000,
+             // IMPORTANT: Allow user interaction
+             disableOnInteraction: false,
+             // Pause autoplay on user interaction
+             pauseOnMouseEnter: true
+           },
+           
+           // Ensure user can interact
+           allowTouchMove: true,
+           simulateTouch: true,
+           
+           // Transition speed
+           speed: 600,
+           
+           // Keyboard navigation
+           keyboard: {
+             enabled: true
+           },
+           
+           // Handle video slides
+           on: {
+             slideChange: function () {
+               // Pause all videos when changing slides
+               const videos = document.querySelectorAll('.portfolio-details-slider video');
+               videos.forEach(video => {
+                 video.pause();
+               });
+             },
+             slideChangeTransitionEnd: function () {
+               // Reset and play video on the active slide
+               const activeSlide = this.slides[this.activeIndex];
+               const activeVideo = activeSlide.querySelector('video');
+               if (activeVideo) {
+                 activeVideo.currentTime = 0;
+                 activeVideo.play();
+               }
+             },
+             // Restart autoplay after manual interaction
+             touchEnd: function () {
+               if (this.autoplay.running) {
+                 this.autoplay.stop();
+                 this.autoplay.start();
+               }
+             }
+           }
+         });
+         
+         // Optional: Add manual controls to pause/play autoplay
+         const swiperContainer = document.querySelector('.portfolio-details-slider');
+         
+         swiperContainer.addEventListener('mouseenter', () => {
+           swiper.autoplay.stop();
+         });
+         
+         swiperContainer.addEventListener('mouseleave', () => {
+           swiper.autoplay.start();
+         });
+       } else {
+         console.error('Swiper library not loaded. Please check the script inclusion.');
+       }
+     });
+   </script>
+  
+</body>
+
+</html>
